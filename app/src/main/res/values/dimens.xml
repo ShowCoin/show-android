@@ -1,0 +1,49 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+
+    <dimen name="navigationbarview_textsizeMax">12sp</dimen>
+    <dimen name="navigationbarview_textsizeMin">10sp</dimen>
+
+
+    <dimen name="chat_set_item_height">60dp</dimen>
+    <dimen name="chat_set_item_margin_left">15dp</dimen>
+
+
+    <dimen name="private_chat_message_head_margin_left">2dp</dimen>
+    <dimen name="private_chat_message_padding_top">10dp</dimen>
+    <dimen name="private_chat_message_padding_bottom">10dp</dimen>
+    <dimen name="private_chat_message_media_and_head_size">0dp</dimen>
+    <dimen name="private_chat_message_time_bg_padding_top_bottom">3dp</dimen>
+    <dimen name="private_chat_message_time_bg_padding_left_right">5dp</dimen>
+    <dimen name="private_chat_message_time_bg_margin_top">10dp</dimen><!--左侧底部免打扰提醒-->
+    <dimen name="private_chat_message_dice_width">45dp</dimen>
+    <dimen name="private_chat_message_dice_height">45dp</dimen>
+
+    <dimen name="private_chat_message_content_margin_top_text">11dp</dimen><!--和头像居中对齐的-->
+    <dimen name="private_chat_message_content_margin_top">9dp</dimen><!--和头像顶部对齐-->
+
+    <dimen name="private_chat_message_read_state_with_triangle">68dp</dimen><!--读取状态靠右的距离(带三角)-->
+    <dimen name="private_chat_message_read_state">65dp</dimen><!--读取状态靠右的距离-->
+
+    <dimen name="private_chat_message_read_state_margin_top">8dp</dimen><!--读取状态靠右的距离-->
+
+
+    <dimen name="private_chat_message_location_width">200dp</dimen>
+    <dimen name="private_chat_message_location_height">110dp</dimen>
+
+
+    <dimen name="private_official_padding_bottom">20dp</dimen>
+    <dimen name="private_official_padding_top">20dp</dimen>
+
+    <dimen name="news_offical_head_size">40dp</dimen>
+
+    <dimen name="vip_item_margin_left">15dp</dimen>
+
+    <dimen name="text_size_28px">14sp</dimen>
+
+    <dimen name="title_hight">47dp</dimen>
+
+</resources>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <declare-styleable name="TasksCompletedView">
+        <attr name="radius" format="dimension"/>
+        <attr name="strokeWidth" format="dimension"/>
+        <attr name="circleColor" format="color"/>
+        <attr name="ringColor" format="color"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="LikeButton">
+        <attr name="icon_size" format="dimension|reference"/>
+        <attr name="like_drawable" format="reference" />
+        <attr name="unlike_drawable" format="reference" />
+        <attr name="dots_primary_color" format="color|reference" />
+        <attr name="dots_secondary_color" format="color|reference" />
+        <attr name="circle_start_color" format="color|reference" />
+        <attr name="circle_end_color" format="color|reference" />
+        <attr name="liked" format="boolean"/>
+        <attr name="is_enabled" format="boolean"/>
+        <attr name="anim_scale_factor" format="float"/>
+    </declare-styleable>
+
+    <declare-styleable name="RoundProgressBar">
+        <attr name="roundColor" format="color"/>
+        <attr name="roundColorBg" format="color"/>
+        <attr name="roundProgressColor" format="color"/>
+        <attr name="roundWidth" format="dimension"></attr>
+        <attr name="textColor" format="color" />
+        <attr name="roundMax" format="integer"></attr>
+        <attr name="textIsDisplayable" format="boolean"></attr>
+        <attr name="style">
+            <enum name="STROKE" value="0"></enum>
+            <enum name="FILL" value="1"></enum>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="SwipeMenuLayout">
+        <attr name="swipeEnable" format="boolean"/>
+        <attr name="ios" format="boolean"/>
+        <attr name="leftSwipe" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="HoloCircleSeekBar">
+        <attr name="wheel_size" format="dimension" />
+        <attr name="pointer_size" format="dimension" />
+        <attr name="max" format="integer"/>
+        <attr name="show_text" format="boolean"/>
+        <attr name="start_angle" format="integer"/>
+        <attr name="end_angle" format="integer"/>
+        <attr name="text_size" format="dimension"/>
+        <attr name="init_position" format="integer"/>
+        <attr name="wheel_active_color" format="string"/>
+        <attr name="wheel_unactive_color" format="string"/>
+        <attr name="pointer_color" format="string"/>
+        <attr name="pointer_halo_color" format="string"/>
+        <attr name="text_color" format="string"/>
+        <attr name="android:thumb" />
+    </declare-styleable>
+
+    <declare-styleable name="FlikerProgressBar">
+        <attr name="textSize" format="dimension|reference"/>
+
+        <attr name="loadingColor" format="color|reference"/>
+
+        <attr name="stopColor" format="color|reference"/>
+
+    </declare-styleable>
+
+
+    <declare-styleable name="CustomSwipeRefreshLayout">
+        <attr name="enable_top_progress_bar" format="boolean" />
+        <attr name="refresh_mode" format="enum" >
+            <enum name="swipe_mode" value="1" />
+            <enum name="pull_mode" value="2" />
+        </attr>
+        <attr name="progressHeight" format="dimension" />
+        <attr name="time_out_return_to_top" format="integer" />
+        <attr name="time_out_refresh_complete" format="integer" />
+        <attr name="return_to_top_duration" format="integer" />
+        <attr name="return_to_header_duration" format="integer" />
+        <attr name="keep_refresh_head" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="AutofitTextView">
+        <!-- Minimum size of the text. -->
+        <attr name="minTextSize" format="dimension" />
+        <!-- Amount of precision used to calculate the correct text size to fit within its
+        bounds. Lower precision is more precise and takes more time. -->
+        <attr name="precision" format="float" />
+        <!-- Defines whether to automatically resize text to fit to the view's bounds. -->
+        <attr name="sizeToFit" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="RangeSeekBar">
+        <attr name="seekmax" format="float"/>
+        <attr name="seekmin" format="float"/>
+        <attr name="reserve" format="float"/>
+        <attr name="cells" format="integer"/>
+        <attr name="lineColorSelected" format="color"/>
+        <attr name="lineColorEdge" format="color"/>
+        <attr name="seekBarResId" format="reference"/>
+    </declare-styleable>
+
+
+
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <!-- {@deprecated Use civ_circlebackground_color instead.} -->
+        <attr name="civ_fill_color" format="color" />
+        <attr name="civ_circle_background_color" format="color" />
+    </declare-styleable>
+
+
+</resources>

@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="progressHeight">50dp</dimen>
+    <dimen name="title_size">16sp</dimen>
+    <dimen name="titleheight">47dp</dimen>
+</resources>

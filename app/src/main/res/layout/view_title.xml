@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_hight"
+        android:id="@+id/title_lay"
+        android:background="@color/color_d5ae8f"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:id="@+id/title_tltle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="wallet"
+            android:textColor="@color/color_ffffff"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/title_left"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back_white" />
+
+        <ImageView
+            android:id="@+id/title_right"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:src="@drawable/back_white" />
+
+        <TextView
+            android:id="@+id/title_right_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/color_ffffff"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

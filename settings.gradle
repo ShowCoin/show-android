@@ -1,0 +1,1 @@
+include ':app', ':ptrlib', ':common', ':magicindicator', ':media_chooser', ':recyclerviewpager'

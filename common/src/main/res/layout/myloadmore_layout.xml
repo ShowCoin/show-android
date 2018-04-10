@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/transparent"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/loadmore_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/refresh_foot_image" />
+
+    <TextView
+        android:id="@+id/loadmore_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:text="@string/myloadmore_layout_loadmore"
+        android:textColor="@color/color_8d8d8d"
+        android:textSize="12sp" />
+
+
+</LinearLayout>

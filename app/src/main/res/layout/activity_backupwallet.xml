@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ffffff"
+    android:orientation="vertical">
+
+    <one.show.live.widget.TitleView
+        android:id="@+id/backupwallet_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_e8e8e8" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="40dp">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/backup_img" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="最后一步:立刻备份你的钱包"
+        android:textColor="@color/color_333333"
+        android:textSize="15sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:text="备份钱包:导出【助记词】并抄写到安全的地方，千万不要保存到网络上。然后尝试转入，转出小额资产开始使用。"
+        android:textColor="@color/color_8e8e8e"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/backupwallet_ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/color_e8e8e8"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/backup_wallet" />
+
+    <TextView
+        android:id="@+id/backupwallet_tutorial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="查看备份详情教程"
+        android:textColor="@color/color_d5ae8f"
+        android:textSize="12sp" />
+
+</LinearLayout>

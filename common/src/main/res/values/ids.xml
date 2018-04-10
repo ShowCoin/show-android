@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="live_chat_msg_live" type="id" />
+    <item name="header_view" type="id" />
+    <item name="left_btn" type="id" />
+    <item name="left_btn_two" type="id" />
+    <item name="right_btn" type="id" />
+</resources>

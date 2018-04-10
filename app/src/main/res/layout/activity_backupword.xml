@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ffffff"
+    android:orientation="vertical">
+
+    <one.show.live.widget.TitleView
+        android:id="@+id/backupword_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_e8e8e8" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="抄写下你的钱包助记词"
+        android:textColor="@color/color_333333"
+        android:textSize="15sp" />
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:text="助记词用于恢复钱包或重置钱包密码，将它准确的抄写到纸上，并且存放在只有你知道的安全的地方。"
+        android:textColor="@color/color_8e8e8e"
+        android:textSize="10sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@color/color_e8e8e8"
+        android:padding="10dp">
+
+        <one.show.live.widget.WordWrapView
+            android:id="@+id/backupword_wordwrap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/backupwallet_ok"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/color_e8e8e8"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="下一步" />
+
+</LinearLayout>

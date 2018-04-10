@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:background="@drawable/custom_progressdialog_bg"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!--<fr.castorflex.android.circularprogressbar.CircularProgressBar-->
+            <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+            <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:indeterminate="true"-->
+            <!--app:cpb_color="#FFee44"-->
+            <!--app:cpb_max_sweep_angle="300"-->
+            <!--app:cpb_min_sweep_angle="10"-->
+            <!--app:cpb_rotation_speed="1.0"-->
+            <!--app:cpb_stroke_width="2dp"-->
+            <!--app:cpb_sweep_speed="1.0"-->
+            <!--/>-->
+
+
+        <!--<ProgressBar-->
+            <!--android:id="@android:id/progress"-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:indeterminateDrawable="@drawable/progressbar_def_drawable"-->
+            />
+        <!--<one.show.live.view.WhorlView xmlns:app="http://schemas.android.com/apk/res-auto"-->
+                                           <!--android:id="@+id/whorl2"-->
+                                           <!--android:layout_width="50dp"-->
+                                           <!--android:layout_height="50dp"-->
+                                           <!--android:layout_marginTop="12dp"-->
+                                           <!--app:whorlview_circle_colors="#2BCB94"-->
+                                           <!--app:whorlview_circle_speed="270"-->
+                                           <!--app:whorlview_strokeWidth="2"-->
+                                           <!--app:whorlview_sweepAngle="180">-->
+        <!--</one.show.live.view.WhorlView>-->
+
+
+        <ImageView
+            android:id="@+id/wait_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:src="@drawable/refresh_head_image" />
+
+        <TextView
+            android:id="@+id/dialog_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="#888888"
+            android:textSize="13sp"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_color_4088ff_to_64c2f8">
+
+    <TextView
+        android:id="@+id/tv_toast_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="网络状态异常，请检查网络"
+        android:textColor="@color/whiteColor"
+        android:layout_marginBottom="15dp"
+        />
+</RelativeLayout>

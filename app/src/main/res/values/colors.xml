@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <color name="white">#ffffffff</color>
+    <!--白色透明度50%-->
+    <color name="black">#000000</color>
+    <color name="transparent_black_85">#DA000000</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="color_518cff">#518cff</color>
+    <color name="color_ebeaee">#ebeaee</color>
+    <color name="color_fe2971">#fe2971</color>
+    <color name="color_f74c31">#F74C31</color>
+    <color name="color_e6e6e6">#e6e6e6</color>
+    <color name="color_ff932d">#ff932d</color>
+    <color name="color_10ff8007">#1aff8007</color>
+    <color name="color_42a5ff">#42a5ff</color>
+    <color name="color_423d5b">#423d5b</color>
+    <color name="color_6192f8">#6192f8</color>
+    <color name="color_ff984c">#ff984c</color>
+    <color name="color_30d8c0">#30d8c0</color>
+    <color name="color_4d98ff">#4d98ff</color>
+    <color name="color_303030">#303030</color>
+    <color name="color_7a7a7a">#7a7a7a</color>
+    <color name="color_1f1e22">#1f1e22</color>
+    <color name="color_e7e7e7">#e7e7e7</color>
+    <color name="color_e7f4ff">#e7f4ff</color>
+    <color name="color_7e7e7e">#7e7e7e</color>
+    <color name="color_c5c5c5">#c5c5c5</color>
+    <color name="color_71beff">#71beff</color>
+    <color name="color_ff89b3">#ff89b3</color>
+    <color name="color_9b98ab">#9b98ab</color>
+    <color name="color_9b9b9b">#9b9b9b</color>
+    <color name="color_ff9bbf">#ff9bbf</color>
+    <color name="color_ff4fa3">#ff4fa3</color>
+    <color name="color_20ffffff">#33ffffff</color>
+    <color name="color_70ffffff">#b3ffffff</color>
+    <color name="color_dfdfdf">#dfdfdf</color>
+    <color name="color_d7d7d7">#d7d7d7</color>
+    <color name="color_9f9f9f">#9f9f9f</color>
+    <color name="color_9c9eab">#9c9eab</color>
+    <color name="color_949494">#949494</color>
+    <color name="color_8c8c8c">#8c8c8c</color>
+    <color name="color_8c899b">#8c899b</color>
+    <color name="color_aaaaaa">#aaaaaa</color>
+    <color name="color_858585">#858585</color>
+    <color name="color_a1a1a1">#a1a1a1</color>
+    <color name="color_a4a4a4">#a4a4a4</color>
+    <color name="color_34b6ff">#34b6ff</color>
+    <color name="color_3baafd">#3baafd</color>
+    <color name="color_5034b6ff">#8034b6ff</color>
+    <color name="color_fbfbfb">#fbfbfb</color>
+    <color name="color_eaf7ee">#eaf7ee</color>
+    <color name="color_1b1926">#1b1926</color>
+    <color name="color_696969">#696969</color>
+    <color name="color_f1fbff">#f1fbff</color>
+    <color name="color_24222e">#24222E</color>
+    <color name="color_05c99b">#05c99b</color>
+    <color name="color_afadbc">#afadbc</color>
+    <color name="color_bababa">#bababa</color>
+    <color name="color_336dcdf3">#336dcdf3</color>
+    <color name="color_85413e50">#d9413e50</color>
+
+    <color name="black_transparent_95">#66000000</color>
+    <color name="black_transparent_25">#40000000</color>
+    <color name="blackPiece">#1b1b1f</color>
+    <!--登录按钮不可点击时的背景颜色-->
+    <!--文本框水印文字的颜色，发送验证码背景的颜色也是这个-->
+    <color name="hint_color">#BEC0C4</color>
+    <!--edietext的输入文字颜色-->
+    <color name="edit_text_color">#070808</color>
+    <!--发送验证码那几个文字的颜色-->
+    <color name="gray_54">#54595f</color>
+    <!--滚轮背景色-->
+    <color name="province_line_border">#C7C7C7</color>
+    <!--成功文字的颜色-->
+    <color name="success">#75b5f8</color>
+    <!--失败文字的颜色-->
+
+    <!--seekbar选中颜色-->
+    <color name="seekbar_selected">#ff2971</color>
+
+
+
+    <color name="list_header_item_bg">#f2f2f2</color>
+
+     <color name="color_private_chat_item_time">#b6b6b6</color>
+
+    <color name="pro">#FE4060</color>
+
+    <!--魔法效果对应的色值-->
+    <color name="magic_color_1">#e53935</color>
+    <color name="magic_color_2">#7b1fa2</color>
+    <color name="magic_color_3">#303f9f</color>
+    <color name="magic_color_4">#0288d1</color>
+    <color name="magic_color_5">#0097a7</color>
+    <color name="magic_color_6">#c0ca33</color>
+    <color name="magic_color_7">#fdd835</color>
+    <color name="magic_color_8">#00e5ff</color>
+    <color name="magic_color_9">#757575</color>
+    <color name="magic_color_10">#00FF81</color>
+    <color name="magic_color_11">#FF8A80</color>
+    <color name="magic_color_12">#e53935</color>
+
+    <!--二维码-->
+    <color name="viewfinder_mask">#70000000</color>
+    <color name="result_view">#70000000</color>
+    <color name="status_text">#ffffffff</color>
+
+    <color name="color_d5ae8f">#d5ae8f</color>
+    <color name="color_ffffff">#ffffff</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_eeeeee">#eeeeee</color>
+    <color name="color_c09274">#c09274</color>
+    <color name="color_b7b7b7">#b7b7b7</color>
+    <color name="color_f7f7f7">#f7f7f7</color>
+    <color name="color_8e8e8e">#8e8e8e</color>
+    <color name="color_cccccc">#cccccc</color>
+    <color name="color_e8e8e8">#e8e8e8</color>
+
+</resources>

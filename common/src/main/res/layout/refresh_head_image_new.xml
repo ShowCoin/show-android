@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 70dp 才刷新-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="-150dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="17dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/refresh_circle"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/icon_refresh_jiantou"
+            android:layout_marginBottom="5dp"
+            />
+        <ImageView
+            android:id="@+id/refresh_loading"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"
+            android:background="@drawable/refresh_foot_image"
+            android:layout_marginBottom="5dp"
+            />
+        <TextView
+            android:id="@+id/refresh_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="下拉刷新"
+            android:textSize="13sp"
+            android:textColor="@color/color_b6b6b6"
+            />
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

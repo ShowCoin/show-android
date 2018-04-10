@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 内部颜色 -->
+    <solid android:color="@color/color_47bafe" />
+    <corners android:radius="7dp" />
+
+    <!--<gradient android:startColor="@color/pop_end_color"-->
+        <!--android:endColor="@color/pop_start_color"-->
+        <!--/>-->
+
+</shape>

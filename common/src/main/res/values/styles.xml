@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/XKDialogAnimation</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+    </style>
+
+    <style name="XKDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/enter_with_alpha</item>
+        <item name="android:windowExitAnimation">@anim/exit_with_alpha</item>
+    </style>
+
+    <style name="KXAnimBottom" parent="@android:style/Animation">
+        <!--<item name="android:windowEnterAnimation">@anim/push_bottom_in</item>-->
+        <!--<item name="android:windowExitAnimation">@anim/push_bottom_out</item>-->
+
+    </style>
+
+    <style name="MyToast" parent="Base.Animation.AppCompat.Dialog">
+        <item name="android:windowEnterAnimation">@anim/enter_toast</item>
+        <item name="android:windowExitAnimation">@anim/out_toast</item>
+    </style>
+
+    <style name="MyDialogStyle"
+        parent="@android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+    </style>
+    <style name="MyDialogStyleTwo"
+        parent="@android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <!--点击空白处是否关闭-->
+        <item name="android:windowCloseOnTouchOutside">false</item>
+    </style>
+
+    <!--<style name="ultraStyle">-->
+        <!--<item name="cube_ptr:ptr_resistance">1.7</item>-->
+        <!--<item name="cube_ptr:ptr_ratio_of_header_height_to_refresh">1.2</item>-->
+        <!--<item name="cube_ptr:ptr_duration_to_close">300</item>-->
+        <!--<item name="cube_ptr:ptr_duration_to_close_header">2000</item>-->
+        <!--<item name="cube_ptr:ptr_keep_header_when_refresh">true</item>-->
+        <!--<item name="cube_ptr:ptr_pull_to_fresh">false</item>-->
+
+    <!--</style>-->
+
+
+    <declare-styleable name="whorlview_style">
+        <!--<attr name="WhorlView_SmallWhorlColor" format="color" />
+        <attr name="WhorlView_MiddleWhorlColor" format="color" />
+        <attr name="WhorlView_BigWhorlColor" format="color" />-->
+
+        <attr name="whorlview_circle_colors" format="string" />
+
+        <attr name="whorlview_circle_speed" format="integer" />
+        <attr name="whorlview_parallax">
+            <enum name="fast" value="1" />
+            <enum name="medium" value="0" />
+            <enum name="slow" value="2" />
+        </attr>
+        <attr name="whorlview_sweepAngle" format="float" />
+        <attr name="whorlview_strokeWidth" format="float" />
+    </declare-styleable>
+    <style name="ClusterIcon.TextAppearance" parent="android:TextAppearance">
+        <item name="android:textColor">#ffeeeeee</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="Bubble.TextAppearance.Dark" parent="android:TextAppearance.Medium">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#ff7f7f7f</item>
+    </style>
+
+    <style name="Bubble.TextAppearance.Light" parent="Bubble.TextAppearance.Dark">
+        <item name="android:textColor">#ffeeeeee</item>
+    </style>
+
+    <!--title的宽高和背景颜色-->
+    <style name="titlestyle">
+        <item name="android:id">@id/header_view</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/titleheight</item>
+        <item name="android:background">@color/whiteColor</item>
+    </style>
+    <!--title的宽高和背景颜色。。。黑色的那个-->
+    <style name="titlestyle_black">
+        <item name="android:id">@id/header_view</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/titleheight</item>
+        <item name="android:background">@color/color_24222e</item>
+    </style>
+
+</resources>
