@@ -19,11 +19,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import one.show.live.R;
-import one.show.live.util.ConvertToUtils;
-import one.show.live.util.DeviceUtils;
-import one.show.live.util.FrescoUtils;
+import one.show.live.common.util.ConvertToUtils;
+import one.show.live.common.util.DeviceUtils;
+import one.show.live.common.util.FrescoUtils;
 import one.show.live.live.po.POGift;
-import one.show.live.po.GiftBean;
 
 public class GiftAdapter extends BaseAdapter {
 

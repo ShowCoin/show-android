@@ -21,9 +21,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import one.show.live.R;
-import one.show.live.util.ConvertToUtils;
-import one.show.live.util.StringUtils;
-import one.show.live.view.recycler.BaseAdapter;
+import one.show.live.common.util.ConvertToUtils;
+import one.show.live.common.util.StringUtils;
+import one.show.live.common.view.recycler.BaseAdapter;
 import one.show.live.live.po.POIMCustomeMsgType;
 import one.show.live.live.po.POIMMsg;
 import one.show.live.live.po.POIMTalkMsg;

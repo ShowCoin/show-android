@@ -16,7 +16,7 @@ import java.util.concurrent.ExecutionException;
 import butterknife.BindView;
 import one.show.live.R;
 import one.show.live.widget.TitleView;
-import one.show.live.ui.BaseFragment;
+import one.show.live.common.ui.BaseFragment;
 
 /**
  * "我"的页面

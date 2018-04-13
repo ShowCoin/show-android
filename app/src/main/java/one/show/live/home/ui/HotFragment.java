@@ -18,8 +18,8 @@ import one.show.live.R;
 import one.show.live.home.adapter.HotAdapter;
 import one.show.live.play.ui.PlayActivity;
 import one.show.live.po.POHot;
-import one.show.live.ui.BaseFragment;
-import one.show.live.view.recycler.BaseAdapter;
+import one.show.live.common.ui.BaseFragment;
+import one.show.live.common.view.recycler.BaseAdapter;
 
 /**
  * Created by liuzehua on 2018/4/8.

@@ -22,13 +22,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import one.show.live.R;
-import one.show.live.po.POMember;
-import one.show.live.util.ConvertToUtils;
-import one.show.live.util.DelayPostprocessor;
-import one.show.live.util.FrescoUtils;
+import one.show.live.common.po.POMember;
+import one.show.live.common.util.ConvertToUtils;
+import one.show.live.common.util.DelayPostprocessor;
+import one.show.live.common.util.FrescoUtils;
 import one.show.live.util.WeakHandler;
 import one.show.live.live.po.POIMUser;
-import one.show.live.po.UserBean;
 
 
 /**

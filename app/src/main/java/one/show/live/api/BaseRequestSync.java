@@ -2,8 +2,8 @@ package one.show.live.api;
 
 import java.util.Map;
 
-import one.show.live.api.CommonRequestSync;
-import one.show.live.po.POCommonResp;
+import one.show.live.common.api.CommonRequestSync;
+import one.show.live.common.po.POCommonResp;
 
 public abstract class BaseRequestSync<T> extends CommonRequestSync<T> {
 

@@ -46,8 +46,8 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
-import one.show.live.ui.BaseFragmentActivity;
-import one.show.live.view.ToastUtils;
+import one.show.live.common.ui.BaseFragmentActivity;
+import one.show.live.common.view.ToastUtils;
 
 
 

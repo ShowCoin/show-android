@@ -21,8 +21,8 @@ import com.samuel.mediachooser.fragment.VideoFragment;
 
 import java.util.List;
 
-import one.show.live.util.FrescoUtils;
-import one.show.live.util.ImageLoaderUtils;
+import one.show.live.common.util.FrescoUtils;
+import one.show.live.common.util.ImageLoaderUtils;
 
 
 /*

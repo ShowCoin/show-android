@@ -53,7 +53,7 @@ public abstract class BaseRequest {
         BaseRequest.application = application;
 
         try {
-            sslParams = HttpsUtils.getSslSocketFactory(new InputStream[]{application.getAssets().open("beke.crt")}, null, null);
+            sslParams = HttpsUtils.getSslSocketFactory(new InputStream[]{application.getAssets().open("show.crt")}, null, null);
         } catch (IOException e) {
             e.printStackTrace();
             sslParams = HttpsUtils.getSslSocketFactory(null, null, null);
@@ -62,7 +62,7 @@ public abstract class BaseRequest {
         AppUtil appUtil = new AppUtil(application);
         channel = ChannelUtil.getChannel(application);
         if (StringUtils.isEmpty(channel)) {
-            channel = "beke";
+            channel = "show";
         }
         mDeviceId = new DeviceUuidFactory(application).getDeviceUuid().toString();
         versionName = appUtil.getVersionName();
@@ -104,7 +104,7 @@ public abstract class BaseRequest {
         } catch (Exception e) {
             Log.e("requestError", getRequestUrl());
             e.printStackTrace();
-            processResult("{\"state\":" + Constants.NETWORK_ERROR_STATUS + ",\"msg\":\"啊哦!SeeU君也不知道怎么了，稍后再试一下吧~\"}");
+            processResult("{\"state\":" + Constants.NETWORK_ERROR_STATUS + ",\"msg\":\"啊哦!秀播君也不知道怎么了，稍后再试一下吧~\"}");
         } finally {
             if (inputStream != null) {
                 try {
@@ -283,7 +283,7 @@ public abstract class BaseRequest {
             }
             String result = sb.toString();
 //            result = result + ConstantKey.getKey();
-            result = result + "2&g$MEpN98AXjZ91bS#euIZLrRkyTYSreF3Igy3aa@hS1HIN7VIk!WtEBs4*^h!G";
+            result = result + "";
             result = URLEncoder.encode(result, "UTF-8");
 //            Log.e("samuel", "unsign>>>>>" + result);
 

@@ -27,8 +27,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 import one.show.live.R;
-import one.show.live.ui.BaseFragment;
-import one.show.live.util.DeviceUtils;
+import one.show.live.common.ui.BaseFragment;
+import one.show.live.common.util.DeviceUtils;
 
 /**
  * Created by liuzehua on 2018/4/8.

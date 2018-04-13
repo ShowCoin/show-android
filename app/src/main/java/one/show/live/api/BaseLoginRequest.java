@@ -1,6 +1,6 @@
 package one.show.live.api;
 
-import one.show.live.api.CommonRequest;
+import one.show.live.common.api.CommonRequest;
 
 /**
  * Created by apple on 16/6/9.
