@@ -1,4 +1,4 @@
-package one.show.live.common;
+package one.show.live.common.common;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
