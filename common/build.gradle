@@ -26,7 +26,7 @@ android {
         //版本号，升级时可配置
         schemaVersion 4
         //设置DaoMaster、DaoSession、Dao包名，也就是要放置这些类的包的全路径。
-        daoPackage 'one.show.live.greendao'
+        daoPackage 'one.show.live.common.greendao'
         //设置DaoMaster、DaoSession、Dao目录
         targetGenDir 'src/main/java'
     }
