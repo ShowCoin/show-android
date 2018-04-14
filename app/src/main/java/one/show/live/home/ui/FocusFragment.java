@@ -15,13 +15,13 @@ import one.show.live.home.presenter.FocusPresenter;
 import one.show.live.home.view.FocusView;
 import one.show.live.po.POFocus;
 import one.show.live.util.ContextUtils;
-import one.show.live.po.POListData;
-import one.show.live.ui.BaseFragment;
-import one.show.live.util.ConvertToUtils;
-import one.show.live.util.DeviceUtils;
-import one.show.live.view.recycler.BRecyclerView;
-import one.show.live.view.recycler.LoadingMoreFooter;
-import one.show.live.view.recycler.SpacesItemDecoration;
+import one.show.live.common.po.POListData;
+import one.show.live.common.ui.BaseFragment;
+import one.show.live.common.util.ConvertToUtils;
+import one.show.live.common.util.DeviceUtils;
+import one.show.live.common.view.recycler.BRecyclerView;
+import one.show.live.common.view.recycler.LoadingMoreFooter;
+import one.show.live.common.view.recycler.SpacesItemDecoration;
 
 /**
  * Created by liuzehua on 2018/4/8.

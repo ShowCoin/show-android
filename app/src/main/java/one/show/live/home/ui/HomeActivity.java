@@ -17,8 +17,8 @@ import butterknife.BindView;
 import butterknife.OnClick;
 import one.show.live.R;
 import one.show.live.wallet.ui.MeFragment;
-import one.show.live.ui.BaseFragmentActivity;
-import one.show.live.view.ToastUtils;
+import one.show.live.common.ui.BaseFragmentActivity;
+import one.show.live.common.view.ToastUtils;
 
 /**
  * Created by liuzehua on 2018/4/2.

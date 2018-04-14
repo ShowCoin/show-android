@@ -27,7 +27,7 @@ import com.samuel.mediachooser.adapter.BucketGridAdapter;
 import java.io.File;
 import java.util.ArrayList;
 
-import one.show.live.ui.BaseApplication;
+import one.show.live.common.ui.BaseApplication;
 
 
 /*

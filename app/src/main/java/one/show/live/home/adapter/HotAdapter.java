@@ -7,8 +7,8 @@ import java.util.List;
 
 import one.show.live.po.POHot;
 import one.show.live.widget.HotItem;
-import one.show.live.view.recycler.BaseBizAdapter;
-import one.show.live.view.recycler.SimpleHolder;
+import one.show.live.common.view.recycler.BaseBizAdapter;
+import one.show.live.common.view.recycler.SimpleHolder;
 
 /**
  * Created by apple on 18/3/21.

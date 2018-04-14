@@ -22,7 +22,7 @@ import com.samuel.mediachooser.fragment.BucketVideoFragment;
 import java.io.File;
 import java.util.ArrayList;
 
-import one.show.live.util.ImageLoaderUtils;
+import one.show.live.common.util.ImageLoaderUtils;
 
 
 /*
