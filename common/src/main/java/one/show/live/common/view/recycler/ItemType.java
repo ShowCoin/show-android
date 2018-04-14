@@ -5,5 +5,6 @@ public enum ItemType {
     TYPE_HEADER,
     TYPE_FOOTER,
     TYPE_EMPTY,
-    TYPE_ERROR
+    TYPE_ERROR,
+    TYPE_OTHER
 }

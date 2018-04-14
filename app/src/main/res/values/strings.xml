@@ -28,6 +28,12 @@
     <string name="latest">最新</string>
     <string name="square">广场</string>
 
+    <string name="contribution_to_the_list">贡献榜</string>
+    <string name="list_incentives">激励榜</string>
+    <string name="list_of_day">日榜</string>
+    <string name="list_of_week">周榜</string>
+    <string name="the_total_list">总榜</string>
+
 
 
 
