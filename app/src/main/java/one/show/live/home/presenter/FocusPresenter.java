@@ -2,7 +2,6 @@ package one.show.live.home.presenter;
 
 import one.show.live.home.mode.FocusRequest;
 import one.show.live.home.view.FocusView;
-import one.show.live.po.POFocus;
 import one.show.live.common.api.BaseRequest;
 import one.show.live.common.po.POListData;
 import one.show.live.common.ui.BaseListPagePresenter;

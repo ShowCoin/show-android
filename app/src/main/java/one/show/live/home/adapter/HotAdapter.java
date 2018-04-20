@@ -6,7 +6,6 @@ import android.view.ViewGroup;
 import java.util.List;
 
 import one.show.live.po.POHot;
-import one.show.live.widget.HotItem;
 import one.show.live.common.view.recycler.BaseBizAdapter;
 import one.show.live.common.view.recycler.SimpleHolder;
 

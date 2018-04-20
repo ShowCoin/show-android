@@ -5,7 +5,6 @@ import android.view.ViewGroup;
 
 import java.util.List;
 
-import one.show.live.po.POFocus;
 import one.show.live.widget.FocusItem;
 import one.show.live.common.view.recycler.BaseBizAdapter;
 import one.show.live.common.view.recycler.SimpleHolder;
