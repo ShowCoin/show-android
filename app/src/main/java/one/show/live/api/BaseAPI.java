@@ -67,7 +67,7 @@ public class BaseAPI {
         public static String checkOrderResult = "getOrder";
         //提现记录
         public static final String extractRmbList = "bill/extractRmbList";
-        //珍珠兑换贝壳的接口
+
         public static final String exchange = "exchange";
         //兑换记录的接口
         public static final String exchangeList = "bill/exchangeList";

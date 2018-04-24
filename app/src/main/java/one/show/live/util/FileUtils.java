@@ -921,9 +921,9 @@ public class FileUtils {
                     //如果可读写，则使用此目录
                     String path = file.getAbsolutePath();
                     if (path.endsWith("/")) {
-                        BASE_ROOT_PATH = file.getAbsolutePath() + "seeu/";
+                        BASE_ROOT_PATH = file.getAbsolutePath() + "show/";
                     } else {
-                        BASE_ROOT_PATH = file.getAbsolutePath() + "/seeu/";
+                        BASE_ROOT_PATH = file.getAbsolutePath() + "/show/";
                     }
                 }
             } catch (Exception e) {
@@ -935,12 +935,12 @@ public class FileUtils {
                     file = context.getFilesDir();
                     String path = file.getAbsolutePath();
                     if (path.endsWith("/")) {
-                        BASE_ROOT_PATH = file.getAbsolutePath() + "seeu/";
+                        BASE_ROOT_PATH = file.getAbsolutePath() + "show/";
                     } else {
-                        BASE_ROOT_PATH = file.getAbsolutePath() + "/seeu/";
+                        BASE_ROOT_PATH = file.getAbsolutePath() + "/show/";
                     }
                 } else {
-                    BASE_ROOT_PATH = "/sdcard/seeu/";
+                    BASE_ROOT_PATH = "/sdcard/show/";
                 }
             }
         }

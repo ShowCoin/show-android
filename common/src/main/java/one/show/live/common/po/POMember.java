@@ -26,11 +26,11 @@ public class POMember extends POLogin implements Serializable {
      * age : 29
      * isFollowed : false
      * carTypeName : AC Schnitzer ACS6
-     * carTypeUrl : http://video-01.ws.seeulive.cn/5912c1243a07ac651c235c54.png
+     * carTypeUrl : http://video-01.ws.cn/5912c1243a07ac651c235c54.png
      * follow : 2
      * tags : ["白领"]
      * lastLoginType :
-     * carBrandUrl : http://video-01.ws.seeulive.cn/5909606159f3ac654f19e789.png
+     * carBrandUrl : http://video-01.ws.cn/5909606159f3ac654f19e789.png
      * notifyConfig : 63
      * carBrand : 1041
      * isFans : false
@@ -195,7 +195,7 @@ public class POMember extends POLogin implements Serializable {
     }
 
     private boolean unlock;//true/false       //是否解锁过他的作品
-    private int unlockChatAmount;// 解锁所需要的星币
+    private int unlockChatAmount;// 解锁所需要
 
     private int isBlack;//1  是拉黑
 
@@ -856,14 +856,14 @@ public class POMember extends POLogin implements Serializable {
         POMember.mInstanceMember = getInstance();
         POMember.mInstanceMember.setDiamond(beike);
         UserInfoCacheManager.getInstance().setValue("member", new Gson().toJson(POMember.mInstanceMember));
-        EBORefreshBeike.sendRefreshBeikeEvent();//有星钻的变动发通知
+        EBORefreshBeike.sendRefreshBeikeEvent();//有的变动发通知
     }
 
     public static void updateGold(int zhenzhu) {
         POMember.mInstanceMember = getInstance();
         POMember.mInstanceMember.setGold(zhenzhu);
         UserInfoCacheManager.getInstance().setValue("member", new Gson().toJson(POMember.mInstanceMember));
-//        EBORefreshBeike.sendRefreshBeikeEvent();//有星币的变动发送通知
+//        EBORefreshBeike.sendRefreshBeikeEvent();//有的变动发送通知
     }
 
 

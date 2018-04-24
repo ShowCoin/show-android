@@ -14,7 +14,7 @@ public class POIMDanmu implements Parcelable {
      * uid : 742286112919265300
      * profileImg : http://file0.beke.tv/avatar/201606/28/14//1467094949.jpg
      * isVip : 1
-     * nickName : 贝壳
+     * nickName :
      */
 
     /**

@@ -76,7 +76,7 @@ public class PlayLiveFragment extends PlayFragment {
       videoView.start();
     }
     setListener();
-    videoBekenum.setText("贝壳号："+live.getMaster().getPid());
+    videoBekenum.setText("show播号："+live.getMaster().getPid());
     videoTime.setText(TimeUtil.getDateToString(System.currentTimeMillis()));
   }
 

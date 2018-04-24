@@ -568,7 +568,6 @@ public class SendGiftsView extends RelativeLayout implements View.OnClickListene
 
 
     /**
-     * 设置使用的贝壳
      *
      * @param coin
      */

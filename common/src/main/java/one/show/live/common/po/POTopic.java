@@ -11,7 +11,7 @@ public class POTopic implements Serializable {
     /**
      * id : 1
      * name : 健身
-     * image : http://video-01.ws.seeulive.cn/591d5458ec9cdcc2fd2f8aa7.jpg
+     * image : http://video-01.ws.cn/591d5458ec9cdcc2fd2f8aa7.jpg
      * priority : 1   //优先级 0：最优
      * content : 大家一起来健身吧！
      */

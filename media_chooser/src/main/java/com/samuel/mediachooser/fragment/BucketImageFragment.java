@@ -102,7 +102,7 @@ public class BucketImageFragment extends Fragment {
 
                 String path = mCursor.getString(INDEX_BUCKET_URL);
 
-                //合并所有Seeu拍摄的临时文件
+                //合并所有拍摄的临时文件
 
                 String oldLocalFilePath = BaseApplication.getInstance().getOldVideoCachePath();
                 String localFilePath = BaseApplication.getInstance().getVideoCachePath();

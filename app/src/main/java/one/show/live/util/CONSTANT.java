@@ -10,7 +10,7 @@ import android.os.Environment;
 public class CONSTANT {
 
     public static final String rootPath = Environment.getExternalStorageDirectory().getAbsolutePath();
-    public static final String cacheName = "/seeu";
+    public static final String cacheName = "/show";
     public static final String download = cacheName + "/download";
     public static final String downloadVideo = download + "/video";
     public static final String downloadPicture = download + "/picture";

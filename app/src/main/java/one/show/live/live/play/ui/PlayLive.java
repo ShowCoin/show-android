@@ -100,7 +100,7 @@ public class PlayLive extends PlayFragment {
         } else {
             LivePlayer.setUIVIew(null);
         }
-        videoBekenum.setText("贝壳号："+live.getMaster().getPid());
+        videoBekenum.setText("show播号："+live.getMaster().getPid());
         videoTime.setText(TimeUtil.getDateToString(System.currentTimeMillis()));
     }
 

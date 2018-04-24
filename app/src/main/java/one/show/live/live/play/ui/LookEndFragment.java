@@ -52,7 +52,7 @@ public class LookEndFragment extends BaseFragment {
     TextView titleText;
     @BindView(R.id.audience_number)//观看人数
             TextView audienceNum;
-    @BindView(R.id.goldcoins_number)//珍珠数
+    @BindView(R.id.goldcoins_number)//show币
             TextView coinsNum;
     @BindView(R.id.start_back)
     TextView startBack;

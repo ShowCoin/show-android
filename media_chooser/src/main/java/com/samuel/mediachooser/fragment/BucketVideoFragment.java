@@ -111,7 +111,7 @@ public class BucketVideoFragment extends Fragment {
                 }
 
 
-                //合并所有Seeu拍摄的临时文件
+                //合并所有拍摄的临时文件
 
                 String oldLocalFilePath = BaseApplication.getInstance().getOldVideoCachePath();
                 String localFilePath = BaseApplication.getInstance().getVideoCachePath();
@@ -122,12 +122,12 @@ public class BucketVideoFragment extends Fragment {
                     entry = new BucketEntry(
                             mCursor.getLong(INDEX_File_ID),
                             mCursor.getString(INDEX_BUCKET_ID),
-                            "SeeUold", oldLocalFilePath, path);
+                            "showold", oldLocalFilePath, path);
                 } else if (path.startsWith(localFilePath)) {
                     entry = new BucketEntry(
                             mCursor.getLong(INDEX_File_ID),
                             mCursor.getString(INDEX_BUCKET_ID),
-                            "SeeU", localFilePath, path);
+                            "show", localFilePath, path);
                 } else {
                     entry = new BucketEntry(
                             mCursor.getLong(INDEX_File_ID),

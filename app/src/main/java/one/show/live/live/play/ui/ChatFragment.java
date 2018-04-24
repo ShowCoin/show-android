@@ -599,7 +599,7 @@ public class ChatFragment extends BaseFragment implements ChatEventListener, Vie
     public void selectDanma() {
         if (!danmu.isSelected()) {
             danmu.setSelected(true);
-            chatEdit.setHint("1贝壳一条");
+            chatEdit.setHint("1show一条");
         } else {
             danmu.setSelected(false);
             chatEdit.setHint("说点什么吧");

@@ -97,7 +97,7 @@ public class GiftAdapter extends BaseAdapter {
         final POGift bean = list.get(nowPosition);
 
 
-        holder.giftName.setText(String.format("%s贝壳",bean.getPrice()));
+        holder.giftName.setText(String.format("%sshow币",bean.getPrice()));
         holder.giftValue.setText(String.format("+%d经验值",bean.getExp()));
 
         if (bean.isCheck) {
