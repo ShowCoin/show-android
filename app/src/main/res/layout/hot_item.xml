@@ -21,7 +21,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:text="阿布扎比"
             android:textColor="@color/color_ffffff"
             android:textSize="18sp" />
 
@@ -57,10 +56,11 @@
             </RelativeLayout>
 
             <TextView
+                android:id="@+id/hot_item_watch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
-                android:text="660009"
+                android:text="0"
                 android:textColor="@color/color_ffffff"
                 android:textSize="18sp" />
 
@@ -80,16 +80,15 @@
             android:layout_height="wrap_content"
             android:layout_above="@+id/hot_item_nickname"
             android:layout_toLeftOf="@+id/hot_item_right_lay"
-            android:text="阿卡纳萨克斯黑板擦可还是不擦口红是保险卡还是不开心啊还是不辛苦哈说不出是不看哈不是考察包括市场"
             android:layout_marginBottom="20dp"
             android:textColor="@color/color_ffffff"
             android:textSize="15sp" />
 
         <TextView
+            android:id="@+id/hot_item_city"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:text="伊拉克"
             android:layout_marginTop="50dp"
             android:textColor="@color/color_ffffff"
             android:textSize="15sp" />

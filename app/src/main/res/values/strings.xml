@@ -28,6 +28,14 @@
     <string name="latest">最新</string>
     <string name="square">广场</string>
 
+    <string name="contribution_to_the_list">贡献榜</string>
+    <string name="list_incentives">激励榜</string>
+    <string name="list_of_day">日榜</string>
+    <string name="list_of_week">周榜</string>
+    <string name="the_total_list">总榜</string>
+    <string name="convention">Copyright©2018 ConsenLabs\nAll right reserved</string>
+    <string name="introduction">秀币(ShowCoin)是世界首个基于区块链和智能合约的点对点网络技术基础,针对直播类数字娱乐内容分发服务和产品而设计的数字加密虚拟货币。</string>
+
 
 
 

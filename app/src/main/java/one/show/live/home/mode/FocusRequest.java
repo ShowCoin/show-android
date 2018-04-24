@@ -13,7 +13,6 @@ import java.util.Map;
 
 import one.show.live.api.BaseAPI;
 import one.show.live.api.BaseBizRequest;
-import one.show.live.po.POFocus;
 import one.show.live.po.POCommonResp;
 import one.show.live.po.POListData;
 

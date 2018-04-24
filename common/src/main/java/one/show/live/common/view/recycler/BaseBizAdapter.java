@@ -57,7 +57,7 @@ public abstract class BaseBizAdapter<T, H extends RecyclerView.ViewHolder>
         } else if (viewType == ItemType.TYPE_ERROR.ordinal()) {
             return new SimpleHolder(errorView != null ? errorView : LayoutInflater.from(parent.getContext()).inflate(R.layout.net_error, parent, false));
         } else {
-            SimpleHolder holder = (SimpleHolder) onCreateItemViewHolder(parent);
+            SimpleHolder holder = (SimpleHolder) onCreateItemViewHolder(parent,viewType);
             return holder;
         }
     }
@@ -275,7 +275,7 @@ public abstract class BaseBizAdapter<T, H extends RecyclerView.ViewHolder>
         return isCanLoadMore;
     }
 
-    public abstract H onCreateItemViewHolder(ViewGroup parent);
+    public abstract H onCreateItemViewHolder(ViewGroup parent,int type);
 
     public abstract void onBindItemViewHolder(H holder, int position);
 }

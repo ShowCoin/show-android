@@ -13,7 +13,6 @@ import one.show.live.R;
 import one.show.live.home.adapter.FocusAdapter;
 import one.show.live.home.presenter.FocusPresenter;
 import one.show.live.home.view.FocusView;
-import one.show.live.po.POFocus;
 import one.show.live.util.ContextUtils;
 import one.show.live.common.po.POListData;
 import one.show.live.common.ui.BaseFragment;

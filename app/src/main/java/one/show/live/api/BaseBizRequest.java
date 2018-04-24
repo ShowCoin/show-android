@@ -1,5 +1,6 @@
 package one.show.live.api;
 
+
 import one.show.live.common.api.CommonRequest;
 
 public abstract class BaseBizRequest<T> extends CommonRequest<T> {
