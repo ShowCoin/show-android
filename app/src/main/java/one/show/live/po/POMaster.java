@@ -6,7 +6,7 @@ import java.io.Serializable;
  * Created by liuzehua on 2018/4/17.
  */
 
-public class POMaster implements Serializable{
+public class POMaster implements Serializable {
 
 
     /**
@@ -23,7 +23,7 @@ public class POMaster implements Serializable{
      */
 
     private int master_level;
-    private long uid;
+    private String uid;
     private int gender;
     private String nickname;
     private int fan_level;
@@ -41,11 +41,11 @@ public class POMaster implements Serializable{
         this.master_level = master_level;
     }
 
-    public long getUid() {
+    public String getUid() {
         return uid;
     }
 
-    public void setUid(long uid) {
+    public void setUid(String uid) {
         this.uid = uid;
     }
 
