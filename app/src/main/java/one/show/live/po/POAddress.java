@@ -3,7 +3,7 @@ package one.show.live.po;
 import java.io.Serializable;
 
 /**
- * Created by liuzehua on 2018/4/4.
+ * Created by Nano on 2018/4/4.
  */
 
 public class POAddress implements Serializable {

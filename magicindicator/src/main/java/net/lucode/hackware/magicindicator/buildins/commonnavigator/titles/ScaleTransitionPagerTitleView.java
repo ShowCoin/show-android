@@ -5,7 +5,7 @@ import android.content.Context;
 /**
  * 带颜色渐变和缩放的指示器标题
  * 博客: http://hackware.lucode.net
- * Created by hackware on 2016/6/26.
+ * Created by hackware on ..6/26.
  */
 public class ScaleTransitionPagerTitleView extends ColorTransitionPagerTitleView {
     private float mMinScale = 0.75f;

@@ -17,7 +17,7 @@ import one.show.live.login.presenter.SplashPresenter;
 import one.show.live.login.view.SplashView;
 
 /**
- * Created by liuzehua on 2018/4/11.
+ * Created by Nano on 2018/4/11.
  */
 
 public class SplashActivity extends BaseFragmentActivity implements SplashView {

@@ -7,7 +7,7 @@ import android.database.DataSetObserver;
 /**
  * CommonNavigator适配器，通过它可轻松切换不同的指示器样式
  * 博客: http://hackware.lucode.net
- * Created by hackware on 2016/6/26.
+ * Created by hackware on ..6/26.
  */
 public abstract class CommonNavigatorAdapter {
 

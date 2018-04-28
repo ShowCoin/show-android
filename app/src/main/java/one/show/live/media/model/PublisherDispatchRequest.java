@@ -9,7 +9,7 @@ import one.show.live.api.BaseAPI;
 import one.show.live.api.BaseBizRequest;
 import one.show.live.common.po.POCommonResp;
 /**
- * Created by Administrator on 2016/7/19 0019.
+ * Created by Administrator on ..7/19 0019.
  */
 public abstract class PublisherDispatchRequest extends BaseBizRequest<Object> {
 

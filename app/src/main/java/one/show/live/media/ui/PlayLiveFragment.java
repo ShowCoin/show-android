@@ -19,7 +19,7 @@ import tv.danmaku.ijk.media.player.IMediaPlayer;
 import tv.danmaku.ijk.media.player.IjkMediaPlayer;
 
 /**
- * Created by Administrator on 2016/6/7 0007.
+ * Created by Administrator on ..6/7 0007.
  */
 public class PlayLiveFragment extends PlayFragment {
 

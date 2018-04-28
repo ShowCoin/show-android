@@ -18,7 +18,7 @@ import one.show.live.po.POListData;
 
 
 /**
- * Created by liuzehua on 2018/4/9.
+ * Created by Nano on 2018/4/9.
  */
 
 public abstract class FocusRequest extends BaseBizRequest<POListData<POFocus>> {

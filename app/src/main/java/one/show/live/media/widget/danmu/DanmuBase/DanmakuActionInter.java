@@ -3,7 +3,7 @@ package one.show.live.media.widget.danmu.DanmuBase;
 import one.show.live.media.po.POIMDanmu;
 
 /**
- * Created by walkingMen on 2016/5/12.
+ * Created by walkingMen on ..5/12.
  * 弹幕动作类
  */
 public interface DanmakuActionInter {

@@ -14,7 +14,7 @@ import one.show.live.ui.BaseFragmentActivity;
 import one.show.live.view.ToastUtils;
 
 /**
- * Created by liuzehua on 2018/4/3.
+ * Created by Nano on 2018/4/3.
  * 虚拟币详情
  */
 

@@ -8,7 +8,7 @@ import net.lucode.hackware.magicindicator.buildins.ArgbEvaluatorHolder;
 /**
  * 两种颜色过渡的指示器标题
  * 博客: http://hackware.lucode.net
- * Created by hackware on 2016/6/26.
+ * Created by hackware on ..6/26.
  */
 public class ColorTransitionPagerTitleView extends SimplePagerTitleView {
 

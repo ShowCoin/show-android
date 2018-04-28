@@ -3,7 +3,7 @@ package one.show.live.po;
 import java.io.Serializable;
 
 /**
- * Created by liuzehua on 2018/4/14.
+ * Created by Nano on 2018/4/14.
  */
 
 public class PODayList implements Serializable{

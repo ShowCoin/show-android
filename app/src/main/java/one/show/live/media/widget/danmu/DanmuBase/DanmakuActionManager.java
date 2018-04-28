@@ -9,7 +9,7 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 import one.show.live.media.po.POIMDanmu;
 
 /**
- * Created by walkingMen on 2016/5/12.
+ * Created by walkingMen on ..5/12.
  */
 public class DanmakuActionManager implements DanmakuActionInter {
     public List<DanmakuChannel> channels = new LinkedList<>();

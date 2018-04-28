@@ -14,7 +14,7 @@ import one.show.live.po.POCommonResp;
 
 
 /**
- * Created by genghuayun on 2016/3/7.
+ * Created by genghuayun on ..3/7.
  */
 public abstract class BuyGiftsRequest extends CommonRequest<Object> {
     @Override

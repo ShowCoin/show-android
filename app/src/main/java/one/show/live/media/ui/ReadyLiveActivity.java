@@ -45,7 +45,7 @@ import one.show.live.util.NoDoubleClickListener;
 import one.show.live.util.ToolUtil;
 
 /**
- * Created by liuzehua on 2018/4/10.
+ * Created by Nano on 2018/4/10.
  */
 
 public class ReadyLiveActivity extends BaseFragmentActivity {

@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * 圆圈式的指示器
  * 博客: http://hackware.lucode.net
- * Created by hackware on 2016/6/26.
+ * Created by hackware on ..6/26.
  */
 public class CircleNavigator extends View implements IPagerNavigator {
     private int mRadius;

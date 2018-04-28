@@ -19,7 +19,7 @@ import one.show.live.po.PODayList;
 
 
 /**
- * Created by liuzehua on 2018/4/9.
+ * Created by Nano on 2018/4/9.
  */
 
 public abstract class DayListRequest extends BaseBizRequest<POListData<PODayList>> {

@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /**
- * Created by liuzehua on 2018/4/6.
+ * Created by Nano on 2018/4/6.
  */
 
 public class WordWrapView extends ViewGroup {

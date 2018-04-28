@@ -29,7 +29,7 @@ import one.show.live.share.ui.ShareLayout;
 import one.show.live.util.EventBusKey;
 
 /**
- * Created by Administrator on 2016/6/7 0007.
+ * Created by Administrator on ..6/7 0007.
  * 看播结束页面
  */
 public class LookEndFragment extends BaseFragment {

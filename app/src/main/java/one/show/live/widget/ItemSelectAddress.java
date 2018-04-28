@@ -14,7 +14,7 @@ import one.show.live.po.POAddress;
 import one.show.live.po.POAddressList;
 
 /**
- * Created by liuzehua on 2018/4/4.
+ * Created by Nano on 2018/4/4.
  */
 
 public class ItemSelectAddress extends LinearLayout {

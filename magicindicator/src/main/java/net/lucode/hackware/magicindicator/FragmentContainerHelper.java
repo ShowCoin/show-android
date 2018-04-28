@@ -16,7 +16,7 @@ import java.util.List;
 
 /**
  * 使得MagicIndicator在FragmentContainer中使用
- * Created by hackware on 2016/9/4.
+ * Created by hackware on ..9/4.
  */
 
 @TargetApi(Build.VERSION_CODES.HONEYCOMB)

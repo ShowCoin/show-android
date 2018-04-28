@@ -18,7 +18,7 @@ import tv.danmaku.ijk.media.player.IMediaPlayer;
 import tv.danmaku.ijk.media.player.IjkMediaPlayer;
 
 /**
- * Created by liuzehua on 2018/4/10.
+ * Created by Nano on 2018/4/10.
  */
 
 public class VideoPlayerIJK extends FrameLayout {

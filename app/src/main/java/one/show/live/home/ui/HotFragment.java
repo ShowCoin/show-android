@@ -22,7 +22,7 @@ import one.show.live.common.ui.BaseFragment;
 import one.show.live.common.view.recycler.BaseAdapter;
 
 /**
- * Created by liuzehua on 2018/4/8.
+ * Created by Nano on 2018/4/8.
  * 热门
  */
 

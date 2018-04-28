@@ -3,7 +3,7 @@ package one.show.live.common.po;
 import java.io.Serializable;
 
 /**
- * Created by liuzehua on 2017/9/2.
+ * Created by Nano on 2017/9/2.
  */
 
 public class PORecommends implements Serializable

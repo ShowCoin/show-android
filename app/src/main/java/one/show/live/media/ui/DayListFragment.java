@@ -24,7 +24,7 @@ import one.show.live.po.PODayList;
 import one.show.live.util.ContextUtils;
 
 /**
- * Created by liuzehua on 2018/4/14.
+ * Created by Nano on 2018/4/14.
  *
  * 日榜页面，周榜  总榜  都是一个页面
  */

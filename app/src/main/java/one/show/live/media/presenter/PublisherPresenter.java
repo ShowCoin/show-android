@@ -10,7 +10,7 @@ import one.show.live.media.po.POPublisherEnd;
 import one.show.live.media.view.PublisherView;
 
 /**
- * Created by Administrator on 2016/7/19 0019.
+ * Created by Administrator on ..7/19 0019.
  */
 public class PublisherPresenter extends BasePresenter {
 

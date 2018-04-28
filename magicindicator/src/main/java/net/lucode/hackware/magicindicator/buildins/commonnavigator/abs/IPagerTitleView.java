@@ -3,7 +3,7 @@ package net.lucode.hackware.magicindicator.buildins.commonnavigator.abs;
 /**
  * 抽象的指示器标题，适用于CommonNavigator
  * 博客: http://hackware.lucode.net
- * Created by hackware on 2016/6/26.
+ * Created by hackware on ..6/26.
  */
 public interface IPagerTitleView {
     /**

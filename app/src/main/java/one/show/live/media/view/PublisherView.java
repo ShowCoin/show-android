@@ -3,7 +3,7 @@ package one.show.live.media.view;
 import one.show.live.media.po.POPublisherEnd;
 
 /**
- * Created by Administrator on 2016/7/19 0019.
+ * Created by Administrator on ..7/19 0019.
  */
 public interface PublisherView {
   void dispatchStreamSuccess();

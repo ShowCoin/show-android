@@ -3,7 +3,7 @@ package one.show.live.common.po.event;
 import org.greenrobot.eventbus.EventBus;
 
 /**
- * Created by liuzehua on 2017/7/29.
+ * Created by Nano on 2017/7/29.
  */
 
 public class EFixLabel {

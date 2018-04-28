@@ -21,7 +21,7 @@ import tv.danmaku.ijk.media.player.IMediaPlayer;
 import tv.danmaku.ijk.media.player.IjkMediaPlayer;
 
 /**
- * Created by Administrator on 2016/6/6 0006.
+ * Created by Administrator on ..6/6 0006.
  */
 public class PlayVideoFragment extends PlayFragment implements View.OnClickListener{
 

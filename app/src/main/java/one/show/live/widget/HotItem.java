@@ -19,7 +19,7 @@ import one.show.live.common.view.recycler.SimpleHolder;
 import one.show.live.po.POFocus;
 
 /**
- * Created by liuzehua on 2017/11/15.
+ * Created by Nano on 2017/11/15.
  */
 
 public class HotItem extends SimpleHolder {

@@ -12,7 +12,7 @@ import one.show.live.R;
 import one.show.live.home.ui.HomePageActivity;
 
 /**
- * Created by Administrator on 2016/6/29 0029.
+ * Created by Administrator on ..6/29 0029.
  */
 public class NotificationUtil {
 

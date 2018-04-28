@@ -12,7 +12,7 @@ import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.IMeasurab
 /**
  * 类似今日头条切换效果的指示器标题
  * 博客: http://hackware.lucode.net
- * Created by hackware on 2016/6/26.
+ * Created by hackware on ..6/26.
  */
 public class ClipPagerTitleView extends View implements IMeasurablePagerTitleView {
     private String mText;

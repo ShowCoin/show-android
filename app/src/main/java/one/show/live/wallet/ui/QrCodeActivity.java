@@ -16,7 +16,7 @@ import one.show.live.util.DeviceUtils;
 import one.show.live.view.ToastUtils;
 
 /**
- * Created by liuzehua on 2018/3/29.
+ * Created by Nano on 2018/3/29.
  *
  *  二维码页面
  */

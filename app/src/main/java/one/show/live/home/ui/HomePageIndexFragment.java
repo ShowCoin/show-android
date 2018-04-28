@@ -31,7 +31,7 @@ import one.show.live.common.ui.BaseFragment;
 import one.show.live.common.util.DeviceUtils;
 
 /**
- * Created by liuzehua on 2018/4/8.
+ * Created by Nano on 2018/4/8.
  * 首页 fragment
  */
 

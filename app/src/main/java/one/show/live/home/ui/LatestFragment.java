@@ -4,7 +4,7 @@ import one.show.live.R;
 import one.show.live.common.ui.BaseFragment;
 
 /**
- * Created by liuzehua on 2018/4/8.
+ * Created by Nano on 2018/4/8.
  * 首页最新
  */
 

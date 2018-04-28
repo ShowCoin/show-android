@@ -60,7 +60,7 @@ import one.show.live.po.POMaster;
 
 
 /**
- * Created by Administrator on 2016/7/19 0019.
+ * Created by Administrator on ..7/19 0019.
  */
 public class PublisherActivity extends BaseFragmentActivity
         implements NodePublisherDelegate, PublisherView, CountdownInterface, ReadToLiveInterface {

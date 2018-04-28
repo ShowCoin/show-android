@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * Created by liuzehua on 2018/4/21.
+ * Created by Nano on 2018/4/21.
  */
 
 public class POWeixinUser implements Serializable {

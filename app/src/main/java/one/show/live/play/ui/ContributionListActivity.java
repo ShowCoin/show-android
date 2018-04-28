@@ -28,7 +28,7 @@ import one.show.live.common.ui.BaseFragmentActivity;
 import one.show.live.common.util.DeviceUtils;
 
 /**
- * Created by liuzehua on 2018/4/14.
+ * Created by Nano on 2018/4/14.
  * 贡献榜的页面
  */
 

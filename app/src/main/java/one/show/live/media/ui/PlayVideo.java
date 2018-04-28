@@ -26,7 +26,7 @@ import one.show.live.share.ui.ShareDialog;
 import one.show.live.util.TimeUtil;
 
 /**
- * Created by Administrator on 2016/7/25 0025.
+ * Created by Administrator on ..7/25 0025.
  */
 public class PlayVideo extends PlayFragment {
   @BindView(R.id.video_bekenum) TextView videoBekenum;

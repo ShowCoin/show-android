@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * 包裹住内容区域的指示器，类似天天快报的切换效果，需要和IMeasurablePagerTitleView配合使用
  * 博客: http://hackware.lucode.net
- * Created by hackware on 2016/6/26.
+ * Created by hackware on ..6/26.
  */
 public class WrapPagerIndicator extends View implements IPagerIndicator {
     private int mVerticalPadding;

@@ -20,7 +20,7 @@ import one.show.live.widget.WordWrapView;
 import one.show.live.ui.BaseFragmentActivity;
 
 /**
- * Created by liuzehua on 2018/4/6.
+ * Created by Nano on 2018/4/6.
  * <p>
  * 确认助记词词页面
  */

@@ -1,7 +1,7 @@
 package one.show.live.media.po;
 
 /**
- * Created by Administrator on 2016/7/21 0021.
+ * Created by Administrator on ..7/21 0021.
  */
 public class POPublisherEnd {
 

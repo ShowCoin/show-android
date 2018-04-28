@@ -4,7 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 /**
- * Created by Administrator on 2016/7/4 0004.
+ * Created by Administrator on ..7/4 0004.
  */
 public class POAttendanchor implements Parcelable {
 

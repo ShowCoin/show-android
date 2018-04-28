@@ -22,7 +22,7 @@ import one.show.live.common.po.POEventBus;
 import one.show.live.util.EventBusKey;
 
 /**
- * Created by liuzehua on 2018/4/26.
+ * Created by Nano on 2018/4/26.
  * 微博分享
  */
 

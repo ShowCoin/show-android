@@ -30,7 +30,7 @@ import one.show.live.util.SystemUtils;
 
 
 /**
- * Created by walkingMen on 2016/5/12.
+ * Created by walkingMen on ..5/12.
  */
 public class DanmakuChannel extends RelativeLayout {
 

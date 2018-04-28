@@ -10,7 +10,7 @@ import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.IPagerTit
 /**
  * 支持显示角标的title，角标布局可自定义
  * 博客: http://hackware.lucode.net
- * Created by hackware on 2016/7/18.
+ * Created by hackware on ..7/18.
  */
 public class BadgePagerTitleView extends FrameLayout implements IMeasurablePagerTitleView {
     private IPagerTitleView mInnerPagerTitleView;

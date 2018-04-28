@@ -7,7 +7,7 @@ import java.io.Serializable;
 import one.show.live.util.ConfigCacheManager;
 
 /**
- * Created by liuzehua on 2018/4/11.
+ * Created by Nano on 2018/4/11.
  */
 
 public class POConfig implements Serializable{

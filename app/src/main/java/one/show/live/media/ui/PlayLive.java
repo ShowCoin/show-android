@@ -23,7 +23,7 @@ import one.show.live.log.Logger;
 import one.show.live.util.TimeUtil;
 
 /**
- * Created by Administrator on 2016/7/14 0014.
+ * Created by Administrator on ..7/14 0014.
  */
 public class PlayLive extends PlayFragment {
 

@@ -4,7 +4,7 @@ import android.support.v4.view.ViewPager;
 
 /**
  * 简化和ViewPager绑定
- * Created by hackware on 2016/8/17.
+ * Created by hackware on ..8/17.
  */
 
 public class ViewPagerHelper {

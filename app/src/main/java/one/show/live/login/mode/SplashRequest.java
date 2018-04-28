@@ -30,7 +30,7 @@ public abstract class SplashRequest extends BaseBizRequest<POConfig> {
      */
     @Override
     public void onRequestResult(String result) {
-        Logger.d("liuzehua",result);
+        Logger.d("Nano",result);
         Type type = new TypeToken<POCommonResp<POConfig>>() {
         }.getType();
         responseBean = new Gson().fromJson(result, type);

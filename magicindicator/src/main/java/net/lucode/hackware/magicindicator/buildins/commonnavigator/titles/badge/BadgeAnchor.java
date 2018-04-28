@@ -2,7 +2,7 @@ package net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.badge
 
 /**
  * 角标的锚点
- * Created by hackware on 2016/7/19.
+ * Created by hackware on ..7/19.
  */
 public enum BadgeAnchor {
     LEFT,
