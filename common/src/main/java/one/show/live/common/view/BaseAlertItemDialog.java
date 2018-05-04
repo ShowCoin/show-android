@@ -15,7 +15,7 @@ import one.show.live.common.common.R;
 
 
 /**
- * Created by ydeng on 16/4/8.
+ * Created by ydeng on 18/4/8.
  */
 public class BaseAlertItemDialog extends Dialog implements View.OnClickListener {
 

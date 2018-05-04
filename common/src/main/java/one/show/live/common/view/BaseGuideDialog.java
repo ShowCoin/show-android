@@ -16,7 +16,7 @@ import one.show.live.common.common.R;
 
 
 /**
- * Created by ydeng on 16/4/8.
+ * Created by ydeng on 18/4/8.
  * 引导提示框
  */
 public class BaseGuideDialog extends Dialog implements View.OnClickListener {

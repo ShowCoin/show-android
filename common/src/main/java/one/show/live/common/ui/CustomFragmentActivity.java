@@ -8,7 +8,7 @@ import android.util.Log;
 import java.util.List;
 
 /**
- * Created by Administrator on 2016/6/23 0023.
+ * Created by samuel on 2018/4/23 0023.
  */
 public class CustomFragmentActivity extends FragmentActivity {
   private static final String TAG = "BaseActivity";

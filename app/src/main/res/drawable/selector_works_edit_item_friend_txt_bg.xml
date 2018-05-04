@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@drawable/shape_d8d8d8_radius_5" android:state_selected="true"/>
-    <item android:drawable="@drawable/shape_47bafe_radius_5"/>
-</selector>

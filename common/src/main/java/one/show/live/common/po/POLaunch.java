@@ -1,7 +1,7 @@
 package one.show.live.common.po;
 
 /**
- * Created by apple on 16/7/6.
+ * Created by samuel on 18/3/6.
  */
 public class POLaunch {
 

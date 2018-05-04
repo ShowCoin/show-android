@@ -1,12 +1,4 @@
-/**
- * @filename        MD5.java
- * @function        字符串Md5加密
- * @author          skyz <skyzhw@gmail.com>
- * @datetime        2011-09-03
- * @lastmodify      2011-09-03
- * @version         1.0
- * @copyright       zxtd.com.cn All rights reserved.
- */
+
 package one.show.live.common.util;
 
 import java.security.MessageDigest;

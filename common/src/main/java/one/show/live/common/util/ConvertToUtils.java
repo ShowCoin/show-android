@@ -6,7 +6,7 @@ import android.util.TypedValue;
 
 /**
  * 转换的工具类
- * @author leichunguan
+ * @author samuel
  *
  */
 public class ConvertToUtils {

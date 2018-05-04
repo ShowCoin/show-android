@@ -20,7 +20,7 @@ import one.show.live.common.util.UIUtils;
 import one.show.live.common.common.R;
 
 /**
- * Created by apple on 16/8/24.
+ * Created by apple on 17/8/24.
  */
 public class RefreshHeadImage extends RelativeLayout implements PtrUIHandler {
 

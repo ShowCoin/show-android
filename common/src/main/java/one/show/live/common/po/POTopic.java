@@ -3,7 +3,7 @@ package one.show.live.common.po;
 import java.io.Serializable;
 
 /**
- * Created by ydeng on 2017/6/9.
+ * Created by ydeng on 2017/12/9.
  */
 //话题
 public class POTopic implements Serializable {

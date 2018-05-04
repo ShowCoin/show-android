@@ -9,7 +9,7 @@ import java.util.UUID;
 
 /**
  * 生成获取唯一标识UUID,用于网络请求
- * @author leichunguan
+ * @author samuel
  *
  */
 public class DeviceUuidFactory {

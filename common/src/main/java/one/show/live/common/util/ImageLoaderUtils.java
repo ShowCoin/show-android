@@ -15,7 +15,7 @@ import one.show.live.common.po.POMember;
 import one.show.live.common.common.R;
 
 /**
- * Created by wanglushan on 2017/1/23.
+ * Created by wanglushan on 2017/12/23.
  */
 
 public class ImageLoaderUtils {

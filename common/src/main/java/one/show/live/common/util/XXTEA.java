@@ -1,12 +1,3 @@
-/**
- * @filename        XXTEA.java
- * @function        XXXTEA加密
- * @author          skyz <skyzhw@gmail.com>
- * @datetime        2011-09-03
- * @lastmodify      2011-09-03
- * @version         1.0
- * @copyright       zxtd.com.cn All rights reserved.
- */
 package one.show.live.common.util;
 
 
