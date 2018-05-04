@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@null"
+    android:fitsSystemWindows="true">
+
+    <!--<android.support.design.widget.AppBarLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--app:elevation="0dp">-->
+
+    <!--<android.support.v7.widget.Toolbar-->
+    <!--android:id="@+id/toolbar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="?attr/actionBarSize"-->
+    <!--android:background="@color/colorPrimary">-->
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="fill_parent"-->
+    <!--android:gravity="center">-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/backArrow_imageView_toolbar_MediaChooser"-->
+    <!--android:layout_width="48dp"-->
+    <!--android:layout_height="48dp"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:contentDescription="@null"-->
+    <!--android:paddingRight="20dp"-->
+    <!--android:scaleType="centerInside"-->
+    <!--android:src="@drawable/ic_navigation_left_from_media_chooser_header_bar" />-->
+
+
+    <!--<TextView-->
+    <!--android:id="@+id/done_textView_toolbar_MediaChooser"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="fill_parent"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:gravity="center"-->
+    <!--android:padding="2dp"-->
+    <!--android:paddingBottom="5dp"-->
+    <!--android:paddingTop="5dp"-->
+    <!--android:text="@string/done"-->
+    <!--android:textColor="@color/color_light_primary"-->
+    <!--android:textSize="20sp" />-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/camera_imageView_toolbar_MediaChooser"-->
+    <!--android:layout_width="48dp"-->
+    <!--android:layout_height="48dp"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:layout_toLeftOf="@id/done_textView_toolbar_MediaChooser"-->
+    <!--android:contentDescription="@null"-->
+    <!--android:padding="8dp"-->
+    <!--android:scaleType="centerInside" />-->
+
+
+    <!--<TextView-->
+    <!--android:id="@+id/title_textView_toolbar_MediaChooser"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:layout_toLeftOf="@id/camera_imageView_toolbar_MediaChooser"-->
+    <!--android:layout_toRightOf="@id/backArrow_imageView_toolbar_MediaChooser"-->
+    <!--android:ellipsize="end"-->
+    <!--android:singleLine="true"-->
+    <!--android:text="@string/app_name"-->
+    <!--android:textColor="@color/color_light_primary"-->
+    <!--android:textSize="20sp" />-->
+    <!--</RelativeLayout>-->
+    <!--</android.support.v7.widget.Toolbar>-->
+
+    <!--</android.support.design.widget.AppBarLayout>-->
+    <RelativeLayout
+        android:id="@+id/titlelay"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:background="#101010">
+
+
+        <TextView
+            android:id="@+id/title_textView_toolbar_MediaChooser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:text="请选择图片"
+            android:textColor="@color/color_light_primary"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/backArrow_imageView_toolbar_MediaChooser"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            android:paddingRight="20dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/back_white" />
+
+
+        <LinearLayout
+            android:id="@+id/select_countLay"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/title_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="完成"
+                android:textColor="#ff4254"
+                android:textSize="13sp" />
+
+
+            <TextView
+                android:id="@+id/selectCountText"
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:text="(1/5)"
+                android:textColor="@color/whiteColor"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/upload_progress_layout"
+            android:layout_width="35dp"
+            android:layout_height="26dp"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="9dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/uploadingPhotos"
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:layout_centerInParent="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/upload_photos_progress" />
+
+            <TextView
+                android:id="@+id/uploadingCountText"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/bg_upload_count"
+                android:gravity="center"
+                android:text="3"
+                android:textColor="@color/whiteColor"
+                android:textSize="8sp" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+    <GridView
+        android:id="@+id/gridViewFromMediaChooser"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/titlelay"
+        android:background="@color/whiteColor"
+        android:cacheColorHint="#00000000"
+        android:choiceMode="multipleChoice"
+        android:columnWidth="100dp"
+        android:drawSelectorOnTop="false"
+        android:gravity="center"
+        android:horizontalSpacing="1dp"
+        android:listSelector="@android:color/black"
+        android:numColumns="4"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp"
+        android:paddingTop="2dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="2dp">
+
+    </GridView>
+
+</RelativeLayout>

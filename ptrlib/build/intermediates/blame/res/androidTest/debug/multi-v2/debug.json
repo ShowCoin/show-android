@@ -1,0 +1,34 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/liuzehua/show-android-github/ptrlib/build/intermediates/res/merged/androidTest/debug/values_values.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/liuzehua/show-android-github/ptrlib/build/intermediates/bundles/debug/res/values/values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "662,720,783,845,902,981,1044,1104,1179",
+                        "endColumns": "57,62,61,56,78,62,59,74,61",
+                        "endOffsets": "715,778,840,897,976,1039,1099,1174,1236"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/liuzehua/show-android-github/ptrlib/build/intermediates/res/merged/androidTest/debug/values-zh_values-zh.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/liuzehua/show-android-github/ptrlib/build/intermediates/bundles/debug/res/values-zh/values-zh.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,108,164,219,269,332,392,447,508",
+                        "endColumns": "52,55,54,49,62,59,54,60,53",
+                        "endOffsets": "103,159,214,264,327,387,442,503,557"
+                    }
+                }
+            ]
+        }
+    ]
+}

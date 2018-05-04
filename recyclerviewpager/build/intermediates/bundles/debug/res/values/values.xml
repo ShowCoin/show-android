@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RecyclerViewPager"><attr format="float" name="rvp_triggerOffset"/><attr format="float" name="rvp_flingFactor"/><attr format="boolean" name="rvp_singlePageFling"/><attr format="boolean" name="rvp_inertia"/><attr format="float" name="rvp_millisecondsPerInch"/></declare-styleable>
+    <string name="app_name">recyclerviewpager</string>
+</resources>

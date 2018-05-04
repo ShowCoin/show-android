@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/liuzehua/show-android-github/ptrlib/build/intermediates/res/merged/androidTest/debug/layout_cube_ptr_simple_loading.xml.flat",
+        "source": "/Users/liuzehua/show-android-github/ptrlib/build/intermediates/bundles/debug/res/layout/cube_ptr_simple_loading.xml"
+    },
+    {
+        "merged": "/Users/liuzehua/show-android-github/ptrlib/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4_ptr_rotate_arrow.png.flat",
+        "source": "/Users/liuzehua/show-android-github/ptrlib/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/ptr_rotate_arrow.png"
+    },
+    {
+        "merged": "/Users/liuzehua/show-android-github/ptrlib/build/intermediates/res/merged/androidTest/debug/layout_cube_ptr_classic_default_header.xml.flat",
+        "source": "/Users/liuzehua/show-android-github/ptrlib/build/intermediates/bundles/debug/res/layout/cube_ptr_classic_default_header.xml"
+    }
+]

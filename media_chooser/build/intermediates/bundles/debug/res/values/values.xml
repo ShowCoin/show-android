@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#536DFE</color>
+    <color name="colorPrimary">#9E9E9E</color>
+    <color name="colorPrimaryDark">#616161</color>
+    <color name="colorTab">#B6B6B6</color>
+    <color name="color_light_primary">#F5F5F5</color>
+    <color name="color_secondary_text">#727272</color>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <drawable name="checked_item_bg">#30000000</drawable>
+    <string name="app_name">MediaChooser</string>
+    <string name="done"> 确定 </string>
+    <string name="file"> 个文件. </string>
+    <string name="file_size_exceed"> 单个文件大小不能超过</string>
+    <string name="image"> 图片 </string>
+    <string name="images_tab"> 图片 </string>
+    <string name="max_limit_file"> 最多选择 </string>
+    <string name="mb"> MB</string>
+    <string name="no_media_file_available"> 没有可用的文件.</string>
+    <string name="please_select_file"> 请选择一个文件.</string>
+    <string name="please_wait_text"> 请稍候..</string>
+    <string name="refreshing"> 刷新中..</string>
+    <string name="video"> 视频 </string>
+    <string name="videos_tab"> 视频 </string>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="AppThemeToolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="contentInsetStart">0dp</item>
+    </style>
+    <style name="AppThemes" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+
+        <!-- Customize your theme here. -->
+        <item name="toolbarStyle">@style/AppThemeToolbar</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <!--<item name="android:tabWidgetStyle">@android:style/Widget.TabWidget</item>-->
+
+    </style>
+    <style name="TabWidget">
+        <item name="android:textAppearance">@style/TextAppearanceTabWidget</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="TextAppearanceTabWidget">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+</resources>

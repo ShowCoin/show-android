@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/liuzehua/show-android-github/ptrlib/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values/values.xml",
+            "map": [
+                {
+                    "source": "/Users/liuzehua/show-android-github/ptrlib/build/intermediates/bundles/debug/res/values/values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "662,720,783,845,902,981,1044,1104,1179",
+                        "endColumns": "57,62,61,56,78,62,59,74,61",
+                        "endOffsets": "715,778,840,897,976,1039,1099,1174,1236"
+                    }
+                }
+            ]
+        }
+    ]
+}
