@@ -20,16 +20,16 @@ public class POLogin implements Serializable {
      * isNew : 0
      * videoVerifyStatus : 0
      * vipEndTime : 2033-02-23
-     * profileImg : http://video-01.ws.seeulive.cn/591e8e062d5fdcc2c8c02832.jpg
-     * thumbnail : http://video-01.ws.seeulive.cn/591e8e062d5fdcc2c9c02832.jpg
+     * profileImg : http://video-01.ws.cn/591e8e062d5fdcc2c8c02832.jpg
+     * thumbnail : http://video-01.ws.cn/591e8e062d5fdcc2c9c02832.jpg
      * popularNo : 23241724
      * phoneNumber : 18231512425
      * nickName : 特特特
-     * diamond : 125   星钻
+     * diamond : 125
      * background :
      * gender : 2
      * carVerifyStatus : 1   //车产认证状态   //状态值。 0。未提交。 1 提交待审核。2。认证通过。 3认证拒绝
-     * gold : 174     星币
+     * gold : 174
      * ry_token : AlIlGurssY1AEzKFYEcylg4nVBAjLKBtrtzpRWiQ1raq1QXK3Ug+55mydUMiYKpAE/1wOAYN5LA5FMVwO3gG7RswIFhOCz/quWh8DtLGjLw=
      * beke_token : aefa04266af7273151600c6c44f0e2f18b59e944086b65194aa907d283385eed
      */

@@ -5,7 +5,7 @@ import java.io.Serializable;
 import one.show.live.common.util.StringUtils;
 
 /**
- * Created by liuzehua on 2017/12/19.
+ * Created by Nano on 2017/6/19.
  */
 
 public class POPhotos implements Serializable{

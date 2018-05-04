@@ -1,29 +1,26 @@
 package one.show.live.common.ui;
 
-import android.annotation.TargetApi;
 import android.app.Activity;
-import android.app.Dialog;
 import android.content.Context;
 import android.content.ContextWrapper;
-import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.ColorRes;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.Window;
+import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 
 import com.bugtags.library.Bugtags;
-import com.readystatesoftware.systembartint.SystemBarTintManager;
-import com.umeng.analytics.MobclickAgent;
+
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
+
 import java.lang.ref.WeakReference;
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -31,20 +28,18 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+
 import butterknife.ButterKnife;
 import one.show.live.common.global.presenter.ActionPresenter;
 import one.show.live.common.po.POEventBus;
 import one.show.live.common.po.POLaunch;
-import one.show.live.common.po.POMember;
 import one.show.live.common.util.Constants;
-import one.show.live.common.util.StatusBarUtil;
+import one.show.live.common.util.DeviceUtils;
 import one.show.live.common.util.WifiMacAddress;
 import one.show.live.common.view.BaseAlertDialog;
 import one.show.live.common.view.BaseErrorHintDialog;
 import one.show.live.common.view.BaseGuideDialog;
 import one.show.live.common.view.CustomProgressDialog;
-import one.show.live.common.view.HeaderView;
-import one.show.live.common.common.R;
 
 /**
  * Activity基类
@@ -68,6 +63,10 @@ public abstract class BaseFragmentActivity extends CustomFragmentActivity implem
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //设置状态栏
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        }
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);//竖屏
         setContentView(getContentView());
         super.onCreate(savedInstanceState);
@@ -77,56 +76,6 @@ public abstract class BaseFragmentActivity extends CustomFragmentActivity implem
         initBaseView();
     }
 
-    protected void initCommonWindow() {
-        initStatusBar(ContextCompat.getColor(this, R.color.titleColor));
-    }
-
-    protected void initTransparentWindowWorks(){
-        StatusBarUtil.setTransparentForWindow(this);
-    }
-
-
-    protected void initTransparentWindow() {
-        StatusBarUtil.setImmersiveMode(this);
-    }
-
-
-    public void initStatusBar(int color) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            setTranslucentStatus(true);
-        }
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            Window window = getWindow();
-            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS
-                    | WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
-            window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                    | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                    | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
-            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            window.setStatusBarColor(color);
-//            window.setNavigationBarColor(color);
-        } else {
-            SystemBarTintManager tintManager = new SystemBarTintManager(this);
-            tintManager.setStatusBarTintEnabled(true);
-            tintManager.setStatusBarTintColor(color);
-        }
-    }
-
-
-    @TargetApi(19)
-    private void setTranslucentStatus(boolean on) {
-        Window win = getWindow();
-        WindowManager.LayoutParams winParams = win.getAttributes();
-        final int bits = WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS;
-        if (on) {
-            winParams.flags |= bits;
-        } else {
-            winParams.flags &= ~bits;
-        }
-        win.setAttributes(winParams);
-    }
-
 
     protected abstract int getContentView();
 
@@ -134,6 +83,33 @@ public abstract class BaseFragmentActivity extends CustomFragmentActivity implem
     protected void initBaseView() {
 
     }
+
+
+    /**
+     * 动态的设置状态栏  实现沉浸式状态栏
+     *
+     * @param view  占位置的view
+     * @param color 颜色，
+     */
+    public void initState(View view, @ColorRes int color) {
+
+        //当系统版本为4.4或者4.4以上时可以使用沉浸式状态栏
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            //透明状态栏
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+//            //透明导航栏
+//           getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+            view.setVisibility(View.VISIBLE);
+            //获取到状态栏的高度
+            int statusHeight = DeviceUtils.getStatusBarHeight(BaseFragmentActivity.this);
+            //动态的设置隐藏布局的高度
+            ViewGroup.LayoutParams params = (ViewGroup.LayoutParams) view.getLayoutParams();
+            params.height = statusHeight;
+            view.setLayoutParams(params);
+            view.setBackgroundResource(color);
+        }
+    }
+
 
     public BaseAlertDialog getAlertDialog() {
         if (dialog == null) {
@@ -188,8 +164,7 @@ public abstract class BaseFragmentActivity extends CustomFragmentActivity implem
     protected void onResume() {
         super.onResume();
         startApp();
-        MobclickAgent.onPageStart(getClass().getName()); //统计页面(仅有Activity的应用中SDK自动调用，不需要单独写。"SplashScreen"为页面名称，可自定义)
-        MobclickAgent.onResume(this);
+
         Bugtags.onResume(this);
 
     }
@@ -206,8 +181,6 @@ public abstract class BaseFragmentActivity extends CustomFragmentActivity implem
 
     protected void onPause() {
         super.onPause();
-        MobclickAgent.onPageEnd(getClass().getName()); // （仅有Activity的应用中SDK自动调用，不需要单独写）保证 onPageEnd 在onPause 之前调用,因为 onPause 中会保存信息。"SplashScreen"为页面名称，可自定义
-        MobclickAgent.onPause(this);
         Bugtags.onPause(this);
     }
 
@@ -355,16 +328,14 @@ public abstract class BaseFragmentActivity extends CustomFragmentActivity implem
 
     /**
      * AudioManager 内存泄露解决方法
+     *
      * @param newBase
      */
     @Override
-    protected void attachBaseContext(Context newBase)
-    {
-        super.attachBaseContext(new ContextWrapper(newBase)
-        {
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(new ContextWrapper(newBase) {
             @Override
-            public Object getSystemService(String name)
-            {
+            public Object getSystemService(String name) {
                 if (Context.AUDIO_SERVICE.equals(name))
                     return getApplicationContext().getSystemService(name);
                 return super.getSystemService(name);

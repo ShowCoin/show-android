@@ -3,7 +3,7 @@ package one.show.live.common.po;
 import java.io.Serializable;
 
 /**
- * Created by liuzehua on 2017/11/2.
+ * Created by Nano on 2017/9/2.
  */
 
 public class PORecommends implements Serializable
@@ -14,7 +14,7 @@ public class PORecommends implements Serializable
      * carBrand : 0
      * pid : 23242618
      * videoVerifyStatus : 0
-     * avatar : http://images.seeulive.cn/599d61db9b42dcc2ee7682b9.jpg
+     * avatar : http://images.cn/599d61db9b42dcc2ee7682b9.jpg
      * intro :
      * city : 北京市
      * photos : []

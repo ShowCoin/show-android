@@ -253,7 +253,7 @@ public class BaseApplication extends Application {
         if (StringUtils.isNotEmpty(videoCachePath)) {
             return videoCachePath;
         } else {
-            return videoCachePath = Environment.getExternalStorageDirectory() + "/SEEUMeet/local/";
+            return videoCachePath = Environment.getExternalStorageDirectory() + "/showMeet/local/";
         }
     }
 

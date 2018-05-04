@@ -108,14 +108,14 @@ public class BaseGuideDialog extends Dialog implements View.OnClickListener {
                 mTvTitle.setText("收益提现");
                 //设置礼物名称
                 String leftContent = "请前往微信公众号";
-                String centerContent = "SEEU时刻";
+                String centerContent = "";
                 SpannableStringBuilder spStr = new SpannableStringBuilder();
                 spStr.append(leftContent);
                 spStr.append(centerContent);
                 spStr.setSpan(new ForegroundColorSpan(Color.argb(255, 0xfc, 0x3f, 0x99)), leftContent.length(), leftContent.length() + centerContent.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                 mTvDesc1.setText(spStr);
                 mTvDesc2.setVisibility(View.VISIBLE);
-                mTvDesc2.setText("（微信号：SEEU516）");
+                mTvDesc2.setText("（微信号：）");
                 mTvOk.setText("前往微信提现");
                 break;
             case MODE_NOTIFY:

@@ -33,7 +33,7 @@ public class FileUtils {
 
     public final static String GIFT_DOWNLOADCACHE = "/gift";//礼物资源文件夹
 
-    public final static String FILE_DOWNLOAD_PATH = "/mnt/sdcard/Android/data/mobi.hifun.seeu/cache/download";//默认下载的文件地址
+    public final static String FILE_DOWNLOAD_PATH = "/mnt/sdcard/Android/data/one.show.live/cache/download";//默认下载的文件地址
 
     public static File getGiftDownloadDirectory(Context context) {
         //获取SD卡下面的缓存文件夹
@@ -62,7 +62,7 @@ public class FileUtils {
         if (!f.exists() && context != null) {
             f = context.getFilesDir();
         }
-        return new File(f, "/Android/data/mobi.hifun.seeu/files");
+        return new File(f, "/Android/data/one.show.live/files");
     }
 
 
@@ -79,7 +79,7 @@ public class FileUtils {
                 return context.getFilesDir();
             }
         }
-        return new File("/mnt/sdcard/Android/data/mobi.hifun.seeu/files");
+        return new File("/mnt/sdcard/Android/data/one.show.live/files");
     }
 
 
@@ -737,7 +737,7 @@ public class FileUtils {
     }
 
     public static File getCacheDiskPath(Context context, String uniqueName) {
-        String cachePath = "/mnt/sdcard/Android/data/mobi.hifun.seeu/cache";
+        String cachePath = "/mnt/sdcard/Android/data/one.show.live/cache";
         if (context != null) {
             if (Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())) {//去掉isExternalStorageRemovable判断，待验证
                 try {
@@ -762,7 +762,7 @@ public class FileUtils {
     }
 
     public static File getCacheDiskPathAll(Context context) {
-        String cachePath = "/mnt/sdcard/Android/data/mobi.hifun.seeu/cache";
+        String cachePath = "/mnt/sdcard/Android/data/one.show.live/cache";
         if (context != null) {
             if (Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())) {//去掉isExternalStorageRemovable判断，待验证
                 try {
