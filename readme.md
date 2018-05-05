@@ -5,7 +5,7 @@ Version 0.2
 Adopt Inject Dependency Technology to decouple business module and reduce the amount of coding, which 
 help engineers to implement complexity function efficiently.
 ##### MVP
-MVP will actualize the view decoupling from business logic, ensure the flexibility to provide the foundation
+MVP will actualize the view decouple from business logic, ensure the flexibility to provide the foundation
 for incremental iterative development. 
 
 ##### Network
