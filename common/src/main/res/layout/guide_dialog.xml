@@ -49,7 +49,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:textSize="15sp"
-            android:text="请前往微信公众号SEEU时刻"
             android:gravity="center"
             android:textColor="@color/color_979797"
             />
@@ -59,7 +58,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:textSize="13sp"
-            android:text="（微信号：SEEU516）"
             android:gravity="center"
             android:textColor="@color/color_b6b6b6"
             />
