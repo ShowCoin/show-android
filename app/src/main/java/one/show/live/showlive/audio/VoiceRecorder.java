@@ -1,7 +1,6 @@
 package one.show.live.audio;
 
 import android.content.Context;
-import android.media.AudioFocusRequest;
 import android.media.AudioManager;
 import android.media.MediaRecorder;
 import android.net.Uri;
@@ -29,6 +28,8 @@ public class VoiceRecorder {
 
     private long startTime = 0;
 
+    private AudioManager audioManager;
+
     private IVoiceRecorderInfoListener listener;
 
     private final static VoiceRecorderConfiguration DEFAULT = new VoiceRecorderConfiguration(
@@ -43,24 +44,41 @@ public class VoiceRecorder {
 
     private VoiceRecorderConfiguration config;
 
+    private AudioManager.OnAudioFocusChangeListener audioFocusChangeListener = new AudioManager.OnAudioFocusChangeListener() {
+        @Override
+        public void onAudioFocusChange(int focusChange) {
+            switch (focusChange) {
+                case AudioManager.AUDIOFOCUS_LOSS:
+                case AudioManager.AUDIOFOCUS_LOSS_TRANSIENT:
+                case AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK:
+                    cancel();
+                    break;
+            }
+
+        }
+    };
+
     /**
      * Attach with configuration and info listener, the configuration will be default if with null{@link #DEFAULT}
      * {@link VoiceRecorderConfiguration}
      *
+     * @param ctx
      * @param config
      * @param listener
      */
-    public void attach(@Nullable VoiceRecorderConfiguration config, IVoiceRecorderInfoListener listener) {
+    public void attach(Context ctx, @Nullable VoiceRecorderConfiguration config, IVoiceRecorderInfoListener listener) {
         if (null == config) {
             this.config = DEFAULT;
         }
         this.listener = listener;
         recorder = new MediaRecorder();
-//        configRecorder();
+        audioManager = (AudioManager) ctx
+                .getSystemService(Context.AUDIO_SERVICE);
     }
 
     private void configRecorder() {
         if (!isReleased) {
+            recorder.reset();
             recorder.setAudioSource(config.getAudioSource());
             recorder.setAudioChannels(config.getAudioChannels());
             recorder.setOutputFormat(config.getOutputFormat());
@@ -69,7 +87,7 @@ public class VoiceRecorder {
             recorder.setAudioSamplingRate(config.getSampleRate());
             recorder.setAudioEncodingBitRate(config.getEncodingRate());
         } else {
-            //TODO throw exception or log error , alert the recorder was released!
+            Logger.e(TAG, "the recorder was released!!!");
         }
     }
 
@@ -78,17 +96,24 @@ public class VoiceRecorder {
      *
      * @param ctx
      */
-    public void start(Context ctx) {
+    public void startWithAudioFocusRequest(Context ctx) {
         if (isRecording) {
             Logger.e(TAG, "recording is started");
             return;
         }
-        recorder.reset();
+        int result = audioManager.requestAudioFocus(audioFocusChangeListener
+                , AudioManager.STREAM_MUSIC
+                , AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
+
+        if (AudioManager.AUDIOFOCUS_REQUEST_GRANTED != result) {
+            Logger.e(TAG, "request audio focus failed !!");
+            return;
+        }
         configRecorder();
         tempFileUri = Uri.fromFile(new File(ctx.getCacheDir()
                 , System.currentTimeMillis() + config.getFileSuffix()));
         if (null != listener) {
-            listener.onStart(tempFileUri);
+            listener.onRecorderStart(tempFileUri);
         }
         try {
             recorder.setOutputFile(tempFileUri.getPath());
@@ -97,12 +122,12 @@ public class VoiceRecorder {
             isRecording = true;
             startTime = SystemClock
                     .elapsedRealtime();
-            Logger.e(TAG, "start time :" + startTime);
+            Logger.e(TAG, "startWithAudioFocusRequest time :" + startTime);
         } catch (Exception e) {
             e.printStackTrace();
             isRecording = false;
             if (null != listener) {
-                listener.onStartError();
+                listener.onRecorderError();
             }
         }
     }
@@ -113,7 +138,6 @@ public class VoiceRecorder {
         return SystemClock.elapsedRealtime() - startTime;
     }
 
-
     /**
      * Stop recording, when the recorder stopped, the audio file will generated under the path which in configuration
      */
@@ -123,14 +147,18 @@ public class VoiceRecorder {
         stopRecord();
         Logger.e(TAG, "current :" + SystemClock.elapsedRealtime());
         if (null != listener) {
-            listener.onStop(tempFileUri, duration);
+            listener.onRecorderStop(tempFileUri, duration);
         }
     }
 
     public void cancel() {
         recorder.stop();
         if (null != listener) {
-            listener.onCancel(tempFileUri);
+            listener.onRecorderCanceled(tempFileUri);
+        }
+        if (null != tempFileUri) {
+            final File tempFile = new File(tempFileUri.getPath());
+            tempFile.deleteOnExit();
         }
         //TODO delete temp file
     }
