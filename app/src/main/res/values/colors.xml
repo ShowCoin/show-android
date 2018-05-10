@@ -3,4 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="edittext_color">#0d0e0d</color>
+    <color name="uniform_black">#ff161616</color>
 </resources>

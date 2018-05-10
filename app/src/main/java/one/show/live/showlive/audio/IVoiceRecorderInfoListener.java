@@ -10,15 +10,15 @@ public interface IVoiceRecorderInfoListener {
     /**
      * @param voiceFile the recording file
      */
-    void onStart(Uri voiceFile);
+    void onRecorderStart(Uri voiceFile);
 
     /**
      * @param voiceFile the recording file, maybe it needed to be removed
      */
-    void onCancel(Uri voiceFile);
+    void onRecorderCanceled(Uri voiceFile);
 
-    void onStop(Uri voiceFile, long duration);
+    void onRecorderStop(Uri voiceFile, long duration);
 
-    void onStartError();
+    void onRecorderError();
 
 }
