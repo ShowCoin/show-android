@@ -14,7 +14,8 @@ import one.show.live.log.Logger;
  * For playing voice msg
  * Created by clarkM1ss1on on 2018/5/8
  */
-public class VoicePlayer implements MediaPlayer.OnPreparedListener {
+public class VoicePlayer implements MediaPlayer.OnPreparedListener
+        , MediaPlayer.OnCompletionListener {
 
     private final static String TAG = "VoicePlayer";
     private MediaPlayer mediaPlayer;
@@ -31,6 +32,7 @@ public class VoicePlayer implements MediaPlayer.OnPreparedListener {
     public void attach(Context ctx, final IVoicePlayerInfoListener listener) {
         mediaPlayer = new MediaPlayer();
         mediaPlayer.setOnPreparedListener(this);
+        mediaPlayer.setOnCompletionListener(this);
         audioManager = (AudioManager) ctx
                 .getSystemService(Context.AUDIO_SERVICE);
         this.listener = listener;
@@ -66,8 +68,12 @@ public class VoicePlayer implements MediaPlayer.OnPreparedListener {
         }
     }
 
+    public boolean isPlaying() {
+        return mediaPlayer.isPlaying();
+    }
 
-    private void stop() {
+
+    public void stop() {
         if (mediaPlayer.isPlaying()) {
             mediaPlayer.stop();
         }
@@ -120,4 +126,10 @@ public class VoicePlayer implements MediaPlayer.OnPreparedListener {
         mediaPlayer.start();
     }
 
+    @Override
+    public void onCompletion(MediaPlayer mp) {
+        if (null != listener) {
+            listener.onPlayerCompletion(mp);
+        }
+    }
 }
