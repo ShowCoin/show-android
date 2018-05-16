@@ -16,10 +16,11 @@ public class POWithdrawal implements Serializable {
      * status : 提现进行中
      */
 
-    private String showNumber;
-    private String name;
-    private String to_address;
-    private String comment;
+    private String showNumber;  //资产数量
+    private String name; //名称
+    private String to_address; //地址
+    private String comment;// 内容
+
     private String status;
 
     public String getShowNumber() {
