@@ -29,21 +29,6 @@ public class LiveInnerConversationDialog
     public final static String ARG_TARGET_ID = "targetId";
     public final static String TAG = "LiveInnerConversationDialog";
 
-//    @BindView(R.id.messages_title)
-//    TitleView titleView;
-//
-//    @BindView(R.id.messages_cv_list)
-//    RecyclerView messageListView;
-
-//
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setupWindow();
-//        setContentView(R.layout.activity_conversation);
-//        setupTitleView();
-//    }
-
 
     @BindView(R.id.bottomBar)
     View bottomBar;
@@ -90,20 +75,11 @@ public class LiveInnerConversationDialog
     }
 
     private void setupEditText() {
-//        KeyboardVisibilityEvent.registerEventListener(getActivity(), presenter.getKeyboardVisibilityEventListener());
 
         getView().getViewTreeObserver()
                 .addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
                     @Override
                     public void onGlobalLayout() {
-//                        final Rect rect = new Rect();
-//                        getView().getWindowVisibleDisplayFrame(rect);
-//                        int bottomGap = getView().getRootView().getHeight()
-//                                - rect.bottom;
-//                        if (bottomGap > 100) {
-//                            adjustBottomMargin(bottomGap);
-//                        } else {
-//                            adjustBottomMargin(0);
 //                        }
                     }
                 });
@@ -117,19 +93,8 @@ public class LiveInnerConversationDialog
                 .getLayoutParams();
         lp.bottomMargin = margin;
         bottomBar.setLayoutParams(lp);
-//        if (null != getDialog()) {
-
-//            final Window window = getDialog()
-//                    .getWindow();
-//            final WindowManager.LayoutParams lp  = window
-//                    .getAttributes();
-//
-//        }
     }
 
-//    private void setupTitleView() {
-////        titleView.setTitle(R.string.message);
-//    }
 
     public static Bundle getCallingBundle(String targetId) {
         final Bundle bundle = new Bundle();

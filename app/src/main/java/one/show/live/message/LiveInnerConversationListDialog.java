@@ -56,16 +56,6 @@ public class LiveInnerConversationListDialog
         super.onStart();
         setupWindow();
     }
-    //    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setupWindow();
-//        setContentView(R.layout.activity_conversation_list);
-//        presenter = new ConversationListPresenter(this);
-//        setupTitleView();
-//        setupMessageList();
-//        presenter.requestCvList();
-//    }
 
     private void setupWindow() {
         final Window window = getDialog()
@@ -96,11 +86,6 @@ public class LiveInnerConversationListDialog
 
     @Override
     public void moveToConversationView(String targetId) {
-//        startActivity(LiveInnerConversationActivity.getCallingBundle(this,targetId));
-//        getSupportFragmentManager()
-//                .beginTransaction()
-//                .add(new LiveInnerConversationDialog(), "tagConversation")
-//                .commit();
         mBinder.moveToConversationView(targetId);
     }
 
