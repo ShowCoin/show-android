@@ -6,7 +6,7 @@ import java.io.Serializable;
  * Created by Nano on 2018/4/14.
  */
 
-public class PODayList implements Serializable{
+public class PODayList implements Serializable {
 
     String nickName;
 

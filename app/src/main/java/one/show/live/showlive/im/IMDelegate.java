@@ -149,17 +149,6 @@ public enum IMDelegate {
     }
 
 
-    public static Message obtainPrivateMsgObj(String targetId, MessageContent content) {
-        return Message.obtain(targetId
-                , Conversation.ConversationType.PRIVATE
-                , content);
-    }
-
-    public static Message obtainMsgObjByType(String targetId, Conversation.ConversationType type, MessageContent content) {
-        return Message.obtain(targetId
-                , type
-                , content);
-    }
 
     private void initMessageListener() {
         mOnRongMessageListener = new RongIMClient.OnReceiveMessageListener() {
