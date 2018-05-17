@@ -86,9 +86,9 @@ public class CoinItem extends SimpleHolder {
         }
 
 
-        itemShowdetailesImg.setRightImg(one.show.live.R.drawable.payment_img);
+        itemShowdetailesImg.setRightImg(one.show.live.R.drawable.payment_img);//设置头像
         itemShowdetailesNum.setText(ss + " SHOW");
-        itemShowdetailesAddress.setText(poWithdrawal.getTo_address());
+        itemShowdetailesAddress.setText(poWithdrawal.getTo_address());//提现地址
 
         itemShowdetailesImg.setImage(POMember.getInstance().getAvatar());
         itemShowdetailesName.setText(poWithdrawal.getName());
