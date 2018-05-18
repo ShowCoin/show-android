@@ -9,10 +9,6 @@ import android.widget.TextView;
 
 import one.show.live.R;
 
-/**
- * Created by lihui on 2018/4/30.
- */
-
 public class DialogUtil {
     //自定义弹框
     public static AlertDialog showDialog(Context context, String title, String content, final View.OnClickListener onOKClickListener) {
