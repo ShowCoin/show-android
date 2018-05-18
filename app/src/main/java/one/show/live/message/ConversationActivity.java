@@ -1,6 +1,5 @@
 package one.show.live.message.ui;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -19,12 +18,16 @@ import android.widget.TextView;
 import net.yslibrary.android.keyboardvisibilityevent.KeyboardVisibilityEvent;
 
 import butterknife.BindView;
+import in.srain.cube.views.ptr.PtrFrameLayout;
 import one.show.live.R;
 import one.show.live.common.ui.BaseFragmentActivity;
 import one.show.live.common.util.DeviceUtils;
+import one.show.live.common.view.RefreshHeadImage;
 import one.show.live.message.presenter.ConversationPresenter;
 import one.show.live.message.view.IConversationView;
 import one.show.live.personal.ui.ZoomActivity;
+import one.show.live.util.DialogUtil;
+import one.show.live.widget.ActionSheetDialog;
 import one.show.live.widget.TitleView;
 
 /**
@@ -53,6 +56,9 @@ public class ConversationActivity
     @BindView(R.id.voiceMsgInputBtn)
     TextView voiceMsgInputBtn;
 
+    @BindView(R.id.ptrFrame)
+    PtrFrameLayout ptrFrame;
+
 //    @BindView(R.id.emojiBtn)
 //    View emojiBtn;
 
@@ -61,6 +67,7 @@ public class ConversationActivity
 
     @BindView(R.id.bottomPanelViewStub)
     ViewStub bottomPanelViewStub;
+
 
     private View bottomPanelView;
 
@@ -72,8 +79,6 @@ public class ConversationActivity
     private int inputMode = INPUT_MODE_TYPE;
 
     private int voiceBtnStatus = IConversationView.VOICE_STATUS_ACTION_UP;
-
-    public static final String ARG_KEY_TARGET_UID = "uid";
 
     public static Intent getCallingIntent(Context ctx, String targetUid) {
         return new Intent(ctx, ConversationActivity.class)
@@ -87,6 +92,7 @@ public class ConversationActivity
         setContentView(R.layout.activity_conversation);
         presenter = new ConversationPresenter(this);
         setupTitleView();
+        setupPtrView();
         setupRecyclerView();
         setupBottomBar();
         presenter.getMessage();
@@ -94,7 +100,10 @@ public class ConversationActivity
     }
 
     private void setupRecyclerView() {
-        messageList.setLayoutManager(new LinearLayoutManager(this));
+        final LinearLayoutManager lm = new LinearLayoutManager(this);
+        lm.setReverseLayout(true);
+        lm.setStackFromEnd(true);
+        messageList.setLayoutManager(lm);
         messageList.setAdapter(presenter.getAdapter());
         messageList.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -108,7 +117,7 @@ public class ConversationActivity
         });
     }
 
-    private void setupTitleView() {
+    protected void setupTitleView() {
         titleView.setTitle(R.string.conversation)
                 .setTextColor(ContextCompat.getColor(this, R.color.black));
         titleView.setLayBac(R.color.color_ffffff);
@@ -122,7 +131,16 @@ public class ConversationActivity
 
     }
 
-    private void setupBottomBar() {
+    protected void setupPtrView() {
+        final RefreshHeadImage header = new RefreshHeadImage(this);
+        ptrFrame.setDurationToCloseHeader(500);
+        ptrFrame.setHeaderView(header);
+        ptrFrame.addPtrUIHandler(header);
+        ptrFrame.setEnabledNextPtrAtOnce(false);
+        ptrFrame.setPtrHandler(presenter.getPtrFrameHandler());
+    }
+
+    protected void setupBottomBar() {
         voiceMsgSwitchBtn.setOnClickListener(presenter.getBottomBarFuncBtnClickListener());
 //        emojiBtn.setOnClickListener(presenter.getBottomBarFuncBtnClickListener());
         moreBtn.setOnClickListener(presenter.getBottomBarFuncBtnClickListener());
@@ -227,13 +245,10 @@ public class ConversationActivity
 
     @Override
     public void scrollToBottom(final boolean smooth) {
-        final int bottomIndex = presenter
-                .getAdapter()
-                .getItemCount() - 1;
         if (smooth && !isFinishing()) {
-            messageList.smoothScrollToPosition(bottomIndex);
+            messageList.smoothScrollToPosition(0);
         } else {
-            messageList.scrollToPosition(bottomIndex);
+            messageList.scrollToPosition(0);
         }
     }
 
@@ -307,10 +322,62 @@ public class ConversationActivity
     }
 
     @Override
+    public void popupPhotoActionSheet() {
+        DialogUtil.popupPhotoPickAction(this
+                , new ActionSheetDialog.OnSheetItemClickListener() {
+                    @Override
+                    public void onClick(int which) {
+                        presenter.requestPermissionToGetCameraPhoto();
+                    }
+                }
+                , new ActionSheetDialog.OnSheetItemClickListener() {
+                    @Override
+                    public void onClick(int which) {
+                        presenter.requestPermissionToGetAlbumPhoto();
+                    }
+                });
+    }
+
+    @Override
+    public void moveToCamera() {
+
+    }
+
+    @Override
+    public void moveToAlbum() {
+
+    }
+
+    @Override
     public void updateTitleText(String txt) {
         titleView.setTitle(txt)
                 .setTextColor(ContextCompat.getColor(this, R.color.black));
     }
+
+    @Override
+    public void invokeRefreshComplete() {
+        ptrFrame.refreshComplete();
+    }
+
+    @Override
+    public void scrollTo(int position, boolean smooth) {
+        if (smooth) {
+            messageList.smoothScrollToPosition(position);
+        } else {
+            messageList.scrollToPosition(position);
+        }
+    }
+
+    @Override
+    public void adjustWindow() {
+
+    }
+
+    @Override
+    public void restoreWindow() {
+
+    }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
