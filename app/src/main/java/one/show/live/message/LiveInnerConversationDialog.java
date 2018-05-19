@@ -1,5 +1,6 @@
 package one.show.live.message.ui;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Rect;
 import android.net.Uri;
@@ -37,6 +38,7 @@ import one.show.live.message.presenter.ConversationPresenter;
 import one.show.live.message.view.IConversationView;
 import one.show.live.personal.ui.ZoomActivity;
 import one.show.live.util.DialogUtil;
+import one.show.live.util.PhotoTool;
 import one.show.live.widget.ActionSheetDialog;
 import one.show.live.widget.TitleView;
 
@@ -100,6 +102,7 @@ public class LiveInnerConversationDialog
 
     private View imageEntryView;
 
+    private PhotoTool photoTool;
 
     private ConversationPresenter presenter;
 
@@ -137,6 +140,9 @@ public class LiveInnerConversationDialog
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         presenter = new ConversationPresenter(this);
+        photoTool = new PhotoTool(getActivity(), this, REQUEST_CODE_GET_PHOTO_FROM_ALBUM
+                , REQUEST_CODE_GET_PHOTO_FROM_CAMERA
+                , REQUEST_CODE_GET_CROP_PHOTO);
         setupTitleView();
         setupPtrView();
         setupRecyclerView();
@@ -191,10 +197,11 @@ public class LiveInnerConversationDialog
     }
 
     protected void setupTitleView() {
-        titleView.setTitle(R.string.conversation)
-                .setTextColor(ContextCompat.getColor(getActivity(), R.color.black));
-        titleView.setLayBac(R.color.color_ffffff);
-        titleView.setLeftImage(R.drawable.back_black, new View.OnClickListener() {
+        titleView.setTitle(R.string.conversation);
+//                .setTextColor(ContextCompat.getColor(getActivity(), R.color.white));
+        titleView.setLayBac(R.color.color_ebeaee);
+        titleView.setTitleViewHeight(R.dimen.live_inner_title_height);
+        titleView.setLeftImage(R.drawable.back_white, new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 dismissAllowingStateLoss();
@@ -224,26 +231,6 @@ public class LiveInnerConversationDialog
                 , presenter.getKeyboardVisibilityEventListener());
     }
 
-
-//    private void setupEditText() {
-//        KeyboardVisibilityEvent.registerEventListener(getActivity(), presenter.getKeyboardVisibilityEventListener());
-//
-//        getView().getViewTreeObserver()
-//                .addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
-//                    @Override
-//                    public void onGlobalLayout() {
-//
-//                    }
-//                });
-//
-//
-//    }
-
-
-//    private void setupTitleView() {
-////        titleView.setTitle(R.string.message);
-//    }
-
     public static Bundle getCallingBundle(String targetId) {
         final Bundle bundle = new Bundle();
         bundle.putString(IConversationView.ARG_KEY_TARGET_UID, targetId);
@@ -256,8 +243,6 @@ public class LiveInnerConversationDialog
         super.onStop();
         presenter.releaseRecorder();
         presenter.releasePlayer();
-//        getView().getViewTreeObserver()
-//                .removeOnGlobalLayoutListener(globalLayoutListener);
     }
 
     @Override
@@ -448,26 +433,26 @@ public class LiveInnerConversationDialog
                 , new ActionSheetDialog.OnSheetItemClickListener() {
                     @Override
                     public void onClick(int which) {
-                        presenter.requestPermissionToGetAlbumPhoto();
+                        moveToAlbum();
                     }
                 });
     }
 
     @Override
     public void moveToCamera() {
-
+        photoTool.getPhotoFromCamera();
     }
 
     @Override
     public void moveToAlbum() {
-
+        photoTool.getPhotoFromAlbum();
     }
 
 
     @Override
     public void updateTitleText(String txt) {
         titleView.setTitle(txt)
-                .setTextColor(ContextCompat.getColor(getActivity(), R.color.black));
+                .setTextColor(ContextCompat.getColor(getActivity(), R.color.white));
     }
 
     @Override
@@ -484,11 +469,6 @@ public class LiveInnerConversationDialog
         }
     }
 
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        presenter.resultDelivery(requestCode, resultCode, data);
-    }
 
     @Override
     public void adjustWindow() {
@@ -552,6 +532,29 @@ public class LiveInnerConversationDialog
             adjustBottomMargin(0);
 
             scrollToBottom(true);
+        }
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        switch (requestCode) {
+            case REQUEST_CODE_GET_PHOTO_FROM_ALBUM:
+                if (resultCode == Activity.RESULT_OK) {
+                    final String path = photoTool
+                            .getPath(getActivity(), data.getData());
+                    presenter.onGetPhotoResult(path);
+                }
+                break;
+            case REQUEST_CODE_GET_PHOTO_FROM_CAMERA:
+                if (resultCode == Activity.RESULT_OK) {
+                    presenter.onGetPhotoResult(photoTool.getPhotoPath());
+                }
+                break;
+
+            default:
+                break;
         }
     }
 }
