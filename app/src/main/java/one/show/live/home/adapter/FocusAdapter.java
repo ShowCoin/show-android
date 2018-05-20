@@ -12,7 +12,7 @@ import one.show.live.common.view.recycler.SimpleHolder;
 
 /**
  * Created by apple on 18/3/21.
- * <p/>   
+ * <p/>
  * 关注
  */
 public class FocusAdapter extends BaseBizAdapter<POFocus, SimpleHolder> {
