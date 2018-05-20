@@ -1,5 +1,6 @@
 package one.show.live.message.ui;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -27,6 +28,8 @@ import one.show.live.message.presenter.ConversationPresenter;
 import one.show.live.message.view.IConversationView;
 import one.show.live.personal.ui.ZoomActivity;
 import one.show.live.util.DialogUtil;
+import one.show.live.util.PhotoTool;
+import one.show.live.util.UriToPathUtil;
 import one.show.live.widget.ActionSheetDialog;
 import one.show.live.widget.TitleView;
 
@@ -73,12 +76,14 @@ public class ConversationActivity
 
     private View imageEntryView;
 
+    private PhotoTool photoTool;
 
     private ConversationPresenter presenter;
 
     private int inputMode = INPUT_MODE_TYPE;
 
     private int voiceBtnStatus = IConversationView.VOICE_STATUS_ACTION_UP;
+
 
     public static Intent getCallingIntent(Context ctx, String targetUid) {
         return new Intent(ctx, ConversationActivity.class)
@@ -91,6 +96,9 @@ public class ConversationActivity
         initStatusBarForLightTitle(Color.WHITE);
         setContentView(R.layout.activity_conversation);
         presenter = new ConversationPresenter(this);
+        photoTool = new PhotoTool(this, REQUEST_CODE_GET_PHOTO_FROM_ALBUM
+                , REQUEST_CODE_GET_PHOTO_FROM_CAMERA
+                , REQUEST_CODE_GET_CROP_PHOTO);
         setupTitleView();
         setupPtrView();
         setupRecyclerView();
@@ -333,20 +341,21 @@ public class ConversationActivity
                 , new ActionSheetDialog.OnSheetItemClickListener() {
                     @Override
                     public void onClick(int which) {
-                        presenter.requestPermissionToGetAlbumPhoto();
+                        moveToAlbum();
                     }
                 });
     }
 
     @Override
     public void moveToCamera() {
-
+        photoTool.getPhotoFromCamera();
     }
 
     @Override
     public void moveToAlbum() {
-
+        photoTool.getPhotoFromAlbum();
     }
+
 
     @Override
     public void updateTitleText(String txt) {
@@ -382,7 +391,23 @@ public class ConversationActivity
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        presenter.resultDelivery(requestCode, resultCode, data);
+        switch (requestCode) {
+            case REQUEST_CODE_GET_PHOTO_FROM_ALBUM:
+                if (resultCode == Activity.RESULT_OK) {
+                    final String path = photoTool
+                            .getPath(this, data.getData());
+                    presenter.onGetPhotoResult(path);
+                }
+                break;
+            case REQUEST_CODE_GET_PHOTO_FROM_CAMERA:
+                if (resultCode == Activity.RESULT_OK) {
+                    presenter.onGetPhotoResult(photoTool.getPhotoPath());
+                }
+                break;
+
+            default:
+                break;
+        }
     }
 
     private Bundle createViewInfoBundle(View view, String uri) {
