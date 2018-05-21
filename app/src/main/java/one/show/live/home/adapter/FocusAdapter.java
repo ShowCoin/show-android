@@ -23,6 +23,7 @@ public class FocusAdapter extends BaseBizAdapter<POFocus, SimpleHolder> {
     }
 
 
+
     
 
     @Override
