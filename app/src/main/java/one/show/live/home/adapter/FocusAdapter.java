@@ -23,6 +23,8 @@ public class FocusAdapter extends BaseBizAdapter<POFocus, SimpleHolder> {
     }
 
 
+    
+
     @Override
     public SimpleHolder onCreateItemViewHolder(ViewGroup parent, int type) {
         return new FocusItem(parent.getContext(), parent,num);
