@@ -15,6 +15,7 @@ import one.show.live.common.view.recycler.SimpleHolder;
  * <p/>
  * 关注
  */
+
 public class FocusAdapter extends BaseBizAdapter<POFocus, SimpleHolder> {
     int num;
     public FocusAdapter(int num){
