@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * Created by liuzehua on 2018/4/4.
+ * Created by Nano on 2018/4/4.
  * <p>
  * 存储提现地址的po
  */

@@ -3,7 +3,7 @@ package one.show.live.util;
 import android.text.TextUtils;
 
 /**
- * Created by seeu on 2018/1/24.
+ * Created by samuel on 2018/1/24.
  */
 
 public class StringUtil {

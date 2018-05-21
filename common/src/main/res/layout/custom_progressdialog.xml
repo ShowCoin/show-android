@@ -34,7 +34,7 @@
             <!--android:layout_centerInParent="true"-->
             <!--android:indeterminateDrawable="@drawable/progressbar_def_drawable"-->
             />
-        <!--<one.show.live.view.WhorlView xmlns:app="http://schemas.android.com/apk/res-auto"-->
+        <!--<one.show.live.common.view.WhorlView xmlns:app="http://schemas.android.com/apk/res-auto"-->
                                            <!--android:id="@+id/whorl2"-->
                                            <!--android:layout_width="50dp"-->
                                            <!--android:layout_height="50dp"-->
@@ -43,7 +43,7 @@
                                            <!--app:whorlview_circle_speed="270"-->
                                            <!--app:whorlview_strokeWidth="2"-->
                                            <!--app:whorlview_sweepAngle="180">-->
-        <!--</one.show.live.view.WhorlView>-->
+        <!--</one.show.live.common.view.WhorlView>-->
 
 
         <ImageView

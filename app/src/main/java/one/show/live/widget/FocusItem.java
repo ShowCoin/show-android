@@ -13,10 +13,10 @@ import com.facebook.drawee.view.SimpleDraweeView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import one.show.live.R;
+import one.show.live.common.util.DeviceUtils;
+import one.show.live.common.util.FrescoUtils;
+import one.show.live.common.view.recycler.SimpleHolder;
 import one.show.live.po.POFocus;
-import one.show.live.util.DeviceUtils;
-import one.show.live.util.FrescoUtils;
-import one.show.live.view.recycler.SimpleHolder;
 
 public class FocusItem extends SimpleHolder {
 
@@ -79,7 +79,7 @@ public class FocusItem extends SimpleHolder {
             return;
         }
 
-        FrescoUtils.bind(focusImage, data.getNickName(), sizeW, sizeH);
+        FrescoUtils.bind(focusImage, data.getCover(), sizeW, sizeH);
     }
 
 }

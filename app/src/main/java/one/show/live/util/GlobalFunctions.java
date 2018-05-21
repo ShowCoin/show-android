@@ -80,10 +80,10 @@ public class GlobalFunctions
         if (CheckSDCard()) {
             dir = Environment.getExternalStorageDirectory().getAbsolutePath();
         } else {
-            dir = context.getDir("seeu_private", Context.MODE_PRIVATE)
+            dir = context.getDir("show_private", Context.MODE_PRIVATE)
                     .getAbsolutePath();
         }
-        dir = dir + File.separator + "seeu" + File.separator;
+        dir = dir + File.separator + "show" + File.separator;
         MakeDir(dir);
 
         String str_Hide_FilePath = dir + ".nomedia";

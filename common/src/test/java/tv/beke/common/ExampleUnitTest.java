@@ -1,4 +1,4 @@
-package one.show.live.common;
+package one.show.live.common.common;
 
 import org.junit.Test;
 

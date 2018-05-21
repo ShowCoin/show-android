@@ -9,7 +9,7 @@ import com.kogitune.activity_transition.core.MoveData;
 import com.kogitune.activity_transition.core.TransitionAnimation;
 
 /**
- * Created by liuzehua on 2017/5/25.
+ * Created by Nano on 2017/5/25.
  */
 
 public class MyTransition {

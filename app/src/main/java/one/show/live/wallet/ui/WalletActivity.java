@@ -11,7 +11,7 @@ import one.show.live.widget.TitleView;
 import one.show.live.ui.BaseFragmentActivity;
 
 /**
- * Created by liuzehua on 2018/3/29.
+ * Created by Nano on 2018/3/29.
  */
 
 public class WalletActivity extends BaseFragmentActivity {

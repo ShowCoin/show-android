@@ -14,7 +14,7 @@ import rx.functions.Action1;
 import one.show.live.view.ToastUtils;
 
 /**
- * Created by seeu on 2018/1/5.
+ * Created by samuel on 2018/1/5.
  * 拍照前获取权限
  */
 

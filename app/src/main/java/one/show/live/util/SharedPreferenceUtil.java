@@ -15,7 +15,7 @@ import java.io.ObjectOutputStream;
 
 import one.show.live.MeetApplication;
 /**
- * Created by liuzehua on 2018/4/4.
+ * Created by Nano on 2018/4/4.
  */
 /**
  * SharedPreferences工具类，可以保存object对象

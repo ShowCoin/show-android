@@ -19,7 +19,7 @@ import one.show.live.R;
 
 /**
  * title布局
- * Created by liuzehua on 2018/4/2.
+ * Created by Nano on 2018/4/2.
  */
 
 public class TitleView extends LinearLayout {
