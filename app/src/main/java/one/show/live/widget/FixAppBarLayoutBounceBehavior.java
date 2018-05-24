@@ -7,9 +7,6 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
-/**
- * Created by clarkM1ss1on on 2018/5/21
- */
 public class FixAppBarLayoutBounceBehavior extends AppBarLayout.Behavior {
 
     private static final int TYPE_FLING = 1;
