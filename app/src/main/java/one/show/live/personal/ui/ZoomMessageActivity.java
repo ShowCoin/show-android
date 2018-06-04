@@ -19,7 +19,7 @@ import one.show.live.common.util.FrescoUtils;
 
 /**
  * Created by Nano on Show.
- * 这个是聊天页面暂时用的，等到聊天页面页面能拿到图片尺寸的话，在用zoomActivity，之后把这个删掉
+ * 这个是聊天页面暂时用的，等到两天页面能拿到图片尺寸的话，在用zoomActivity，之后把这个删掉
  */
 
 public class ZoomMessageActivity extends BaseFragmentActivity {
@@ -113,6 +113,7 @@ public class ZoomMessageActivity extends BaseFragmentActivity {
         //执行动画
         zoomImg.animate()
                 .setDuration(DEFAULT_DURATION)
+//                .setInterpolator(ACC_INTERPOLATOR)
                 .scaleX(1f)
                 .scaleY(1f)
                 .translationX(0)
@@ -129,6 +130,7 @@ public class ZoomMessageActivity extends BaseFragmentActivity {
     private void runExitAnimation() {
         zoomImg.animate()
                 .setDuration(DEFAULT_DURATION)
+//                .setInterpolator(ACC_INTERPOLATOR)
                 .scaleX(scaleX)
                 .scaleY(scaleY)
                 .translationX(deltaX)

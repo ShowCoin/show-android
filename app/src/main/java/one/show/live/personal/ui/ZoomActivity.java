@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewTreeObserver;
 import android.view.animation.AccelerateInterpolator;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import com.facebook.drawee.view.SimpleDraweeView;
 
@@ -27,7 +28,7 @@ public class ZoomActivity extends BaseFragmentActivity {
     @BindView(R.id.zoom_img)
     SimpleDraweeView zoomImg;
 
-    int DEFAULT_DURATION = 3000;
+    int DEFAULT_DURATION = 300;
 
     public final static AccelerateInterpolator ACC_INTERPOLATOR = new AccelerateInterpolator(
             10.0f);
@@ -44,22 +45,21 @@ public class ZoomActivity extends BaseFragmentActivity {
 
     String imageUrl;
     @BindView(R.id.zoom_lay)
-    LinearLayout zoomLay;
+    RelativeLayout zoomLay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_zoom);
         ButterKnife.bind(this);
-//        initStatusBar(ContextCompat.getColor(this, R.color.color_333333), zoomLay);
-        initTransparentWindow();
+        initStatusBar(ContextCompat.getColor(this, R.color.color_333333), zoomLay);
 
         // 取出传递过来的originView信息
         extractViewInfoFromBundle();
         FrescoUtils.bind(zoomImg, imageUrl);
         onUiReady();
 
-        zoomImg.setOnClickListener(new View.OnClickListener() {
+        zoomLay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 onBackPressed();
@@ -91,23 +91,27 @@ public class ZoomActivity extends BaseFragmentActivity {
         originViewHeight = bundle.getInt("height");
         imageUrl = bundle.getString("img");
 
+        //设置需要放大的图片和放大图片一样大
+        RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) zoomImg.getLayoutParams();
+        layoutParams.width = originViewWidth;
+        layoutParams.height = originViewHeight;
+        zoomImg.setLayoutParams(layoutParams);
 
     }
 
     private void prepareScene() {
-        //缩放到起始view大小
-        scaleX = (float) originViewWidth / zoomImg.getWidth();
-        scaleY = (float) originViewHeight / zoomImg.getHeight();
 
-        if(setLp()==1){
-            scaleY = scaleX;
+       scaleX = DeviceUtils.getScreenWidth(this)/zoomImg.getWidth();
+       scaleY = DeviceUtils.getScreenHeight(this)/zoomImg.getHeight();
 
-        }else if(setLp()==2){
+        BigDecimal s1 = new BigDecimal(scaleX+"");
+        BigDecimal s2 = new BigDecimal(scaleY+"");
+
+        if (s1.compareTo(s2) > 0) {//s1大
             scaleX = scaleY;
+        }else if (s1.compareTo(s2) < 0){
+            scaleY = scaleX;
         }
-
-        zoomImg.setScaleX(scaleX);
-        zoomImg.setScaleY(scaleY);
 
         int[] screenLocation = new int[2];
         zoomImg.getLocationOnScreen(screenLocation);
@@ -117,38 +121,6 @@ public class ZoomActivity extends BaseFragmentActivity {
         zoomImg.setTranslationX(deltaX);
         zoomImg.setTranslationY(deltaY);
 
-
-
-    }
-
-    /**
-     * 设置和小图一样的比例
-     */
-    public int setLp() {
-        int ii=0;//1是用宽的比例2是用高的比例
-        double test1 = zoomImg.getWidth() / originViewWidth;
-        double test2 = zoomImg.getHeight() / originViewHeight;
-
-        BigDecimal s1 = new BigDecimal(test1);
-        BigDecimal s2 = new BigDecimal(test2);
-
-        if (s1.compareTo(s2) > 0) {//s1大
-            ii = 2;
-            LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) zoomImg.getLayoutParams();
-            layoutParams.width = (int) (originViewWidth * test2);
-            layoutParams.height = (int) (originViewHeight * test2);
-            zoomImg.setLayoutParams(layoutParams);
-
-
-        } else if (s1.compareTo(s2) < 0) {
-            ii = 1;
-            LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) zoomImg.getLayoutParams();
-            layoutParams.width = (int) (originViewWidth * test1);
-            layoutParams.height = (int) (originViewHeight * test1);
-            zoomImg.setLayoutParams(layoutParams);
-
-        }
-        return ii;
     }
 
     private void runEnterAnimation() {
@@ -157,8 +129,8 @@ public class ZoomActivity extends BaseFragmentActivity {
         zoomImg.animate()
                 .setDuration(DEFAULT_DURATION)
 //                .setInterpolator(ACC_INTERPOLATOR)
-                .scaleX(1f)
-                .scaleY(1f)
+                .scaleX(scaleX)
+                .scaleY(scaleY)
                 .translationX(0)
                 .translationY(0)
                 .start();
@@ -174,8 +146,8 @@ public class ZoomActivity extends BaseFragmentActivity {
         zoomImg.animate()
                 .setDuration(DEFAULT_DURATION)
 //                .setInterpolator(ACC_INTERPOLATOR)
-                .scaleX(scaleX)
-                .scaleY(scaleY)
+                .scaleX(1f)
+                .scaleY(1f)
                 .translationX(deltaX)
                 .translationY(deltaY)
                 .withEndAction(new Runnable() {
