@@ -100,7 +100,7 @@ public class DataCleanManager {
             return result2.setScale(2, BigDecimal.ROUND_HALF_UP).toPlainString() + "M";
         }
 
-        double teraBytes = gigaByte / 1024;
+
         if (teraBytes < 1) {
             BigDecimal result3 = new BigDecimal(Double.toString(gigaByte));
             return result3.setScale(2, BigDecimal.ROUND_HALF_UP).toPlainString() + "G";
