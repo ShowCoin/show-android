@@ -131,11 +131,20 @@ public class HomeActivity extends BaseFragmentActivity implements OnChangedHomeP
             }
         });
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 96cc2118d9e49171596ac743106d06d9f1e8d4b6
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
                 Logger.e("sssss", "position:" + position + "||positionOffset:" + positionOffset + "||positionOffsetPixels:" + positionOffsetPixels);
+<<<<<<< HEAD
                 if (mPosition == 0) {
+=======
+                if (softFlag && (mPosition == 0 || mPosition == 1)) {
+                    softFlag = false;
+>>>>>>> 96cc2118d9e49171596ac743106d06d9f1e8d4b6
                     hideSoftInput();
                 }
 
@@ -148,6 +157,17 @@ public class HomeActivity extends BaseFragmentActivity implements OnChangedHomeP
             @Override
             public void onPageSelected(int position) {
                 mPosition = position;
+<<<<<<< HEAD
+=======
+                softFlag = true;
+                if (mHomeFragment != null&&mHomeFragment.isAdded()) {
+                    if (mPosition != 1) {
+                        mHomeFragment.pauseLive();
+                    } else {
+                        mHomeFragment.resumeLive();
+                    }
+                }
+>>>>>>> 96cc2118d9e49171596ac743106d06d9f1e8d4b6
             }
 
             @Override
@@ -161,6 +181,11 @@ public class HomeActivity extends BaseFragmentActivity implements OnChangedHomeP
         mPosition = 1;
     }
 
+<<<<<<< HEAD
+=======
+    private boolean softFlag = true;
+
+>>>>>>> 96cc2118d9e49171596ac743106d06d9f1e8d4b6
     @Override
     protected void onDestroy() {
         super.onDestroy();
