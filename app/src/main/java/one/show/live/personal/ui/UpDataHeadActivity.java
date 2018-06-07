@@ -49,6 +49,7 @@ public class UpDataHeadActivity extends BaseFragmentActivity implements AvatarAn
     }
 
     private void initBaseView() {
+        initStatusBarForLightTitle(ContextCompat.getColor(this,R.color.white),updataHeadTitle);
 
         updataHeadTitle.setTitle(getString(R.string.picture))
                 .setTextColor(ContextCompat.getColor(this, R.color.color_333333));
