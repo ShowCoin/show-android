@@ -24,9 +24,6 @@ import one.show.live.personal.presenter.BindsPresenter;
 import one.show.live.po.eventbus.BindEventBean;
 import one.show.live.widget.TitleView;
 
-/**
- * Created by lihui on 2018/7/28.
- */
 public class GoogleCodeActivity extends BaseFragmentActivity implements GoogleBindsView {
 
 
