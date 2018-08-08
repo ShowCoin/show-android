@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/phonetitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <one.show.live.widget.TitleView
+            android:id="@+id/phone_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/phonetitle"
+        android:background="@color/color_0c0c0c">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/color_171717"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <EditText
+                    android:id="@+id/phone_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:hint="@string/phone_number"
+                    android:includeFontPadding="false"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:textColor="@color/color_f7f7f7"
+                    android:textColorHint="@color/color_373737"
+                    android:textCursorDrawable="@drawable/editcursor"
+                    android:textSize="14sp" />
+
+                <View
+                    android:id="@+id/video_view"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="15dp"
+                    android:background="#4cf7f7f7" />
+
+                <TextView
+                    android:id="@+id/send_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/send_code"
+                    android:textColor="@color/color_f7f7f7"
+                    android:textSize="14dp" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/color_171717"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/message_authentication_code"
+                    android:textColor="@color/color_818181"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/message_authentication_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:hint="@string/message_authentication_code"
+                    android:includeFontPadding="false"
+                    android:inputType="number"
+                    android:textColor="@color/color_f7f7f7"
+                    android:textColorHint="@color/color_373737"
+                    android:textCursorDrawable="@drawable/editcursor"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"
+                android:visibility="gone"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/color_171717"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settinga_password"
+                    android:textColor="@color/color_818181"
+                    android:textSize="14sp" />
+
+
+                <EditText
+                    android:id="@+id/input_settinga_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:hint="@string/input_settinga_password"
+                    android:includeFontPadding="false"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:textColor="@color/color_f7f7f7"
+                    android:textColorHint="@color/color_373737"
+                    android:textCursorDrawable="@drawable/editcursor"
+                    android:textSize="14sp" />
+
+
+                <ImageView
+                    android:id="@+id/iv_shpassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/hidepassword" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_0c0c0c"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/color_171717"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/confirm_password"
+                    android:textColor="@color/color_818181"
+                    android:textSize="14sp" />
+
+
+                <EditText
+                    android:id="@+id/confirm_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:hint="@string/confirm_password"
+                    android:includeFontPadding="false"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:textColor="@color/color_f7f7f7"
+                    android:textColorHint="@color/color_373737"
+                    android:textCursorDrawable="@drawable/editcursor"
+                    android:textSize="14sp" />
+
+
+                <ImageView
+                    android:id="@+id/iv_confirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/hidepassword" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_0c0c0c"
+                android:visibility="gone"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/paddword_requirement"
+                android:textColor="@color/color_999999"
+                android:textSize="12dp" />
+
+
+            <TextView
+                android:id="@+id/btn_next"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/account_btn_bluck"
+                android:enabled="false"
+                android:gravity="center"
+                android:text="@string/bound"
+                android:textColor="@drawable/textview_bg_selector"
+                android:textSize="14dp" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

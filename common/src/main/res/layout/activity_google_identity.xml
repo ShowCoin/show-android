@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_0c0c0c"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/google_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <one.show.live.widget.TitleView
+            android:id="@+id/google_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </one.show.live.widget.TitleView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/google_top"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/prevent_loss"
+            android:textColor="@color/color_f7f7f7"
+            android:textSize="13dp" />
+
+
+        <ImageView
+            android:id="@+id/google_code_image"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/color_f1f1f1" />
+
+
+        <LinearLayout
+            android:id="@+id/google_copy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/tv_google"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_949494"
+                android:textSize="13dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/copy"
+                android:textColor="@color/color_4d98ff"
+                android:textSize="13dp" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_putforward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:textColor="@color/color_818181"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/google_certification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/google_certification"
+            android:textColor="@color/color_f7f7f7" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="25dp"
+        android:text="@string/dimensional_codes"
+        android:textColor="@color/color_818181"
+        android:textSize="13dp" />
+</RelativeLayout>

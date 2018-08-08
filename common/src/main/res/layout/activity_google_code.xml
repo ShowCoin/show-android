@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_0c0c0c"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/google_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <one.show.live.widget.TitleView
+            android:id="@+id/google_code_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </one.show.live.widget.TitleView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/google_code"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:layout_marginBottom="25dp"
+            android:text="@string/google_err"
+            android:textColor="@color/color_818181"
+            android:textSize="13dp" />
+
+
+        <one.show.live.login.view.VerifyCodeView
+            android:id="@+id/verify_code_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="10dp" />
+
+    </LinearLayout>
+</RelativeLayout>
