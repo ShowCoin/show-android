@@ -90,7 +90,7 @@ public class EditTextWithDel extends AppCompatEditText {
             if (rect.contains(eventX, eventY)) {
                 setText("");
             } else {
-                if (edittextClick != null)
+                if (edittextClick != null)se
                     edittextClick.Editclick(this);
             }
 
