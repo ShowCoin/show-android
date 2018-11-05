@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.NavigableSet;
 import java.util.TreeSet;
 
-class ViewCacheStorage implements IViewCacheStorage {
+class ViewCacheStorage  {
     private static final String TAG = ViewCacheStorage.class.getSimpleName();
     private static final int SIZE_MAX_CACHE = 1000;
 
